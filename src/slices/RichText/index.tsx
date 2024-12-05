@@ -6,6 +6,7 @@ import {
   JSXMapSerializer,
 } from "@prismicio/react";
 import styles from "./index.module.css";
+import { cn } from "@/libs/utils";
 
 const components: JSXMapSerializer = {
   hyperlink: ({ node, children }) => {
@@ -28,7 +29,7 @@ type RichTextProps = SliceComponentProps<Content.RichTextSlice>;
  */
 const RichText = ({ slice }: RichTextProps): JSX.Element => {
   return (
-    <section className={styles.richtext}>
+    <section className={cn("min-h-screen flex flex-col items-center justify-center", styles.richtext)}>
       <PrismicRichText field={slice.primary.content} components={components} />
     </section>
   );
