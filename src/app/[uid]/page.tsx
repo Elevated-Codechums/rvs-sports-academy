@@ -20,10 +20,10 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { uid } = await params;
   const client = createClient();
-  const page = await client.getByUID("page", uid).catch(() => notFound());
+  const page = await client.getByUID("homepage", uid).catch(() => notFound());
 
   return {
-    title: prismic.asText(page.data.title),
+    title: page.data.title,
     description: page.data.meta_description,
     openGraph: {
       title: page.data.meta_title || undefined,
@@ -39,7 +39,7 @@ export async function generateMetadata({
 export default async function Page({ params }: { params: Promise<Params> }) {
   const { uid } = await params;
   const client = createClient();
-  const page = await client.getByUID("page", uid).catch(() => notFound());
+  const page = await client.getByUID("homepage", uid).catch(() => notFound());
 
   return <SliceZone slices={page.data.slices} components={components} />;
 }
@@ -50,7 +50,7 @@ export async function generateStaticParams() {
   /**
    * Query all Documents from the API, except the homepage.
    */
-  const pages = await client.getAllByType("page", {
+  const pages = await client.getAllByType("homepage", {
     predicates: [prismic.filter.not("my.page.uid", "home")],
   });
 

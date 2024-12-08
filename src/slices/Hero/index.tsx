@@ -35,7 +35,7 @@ const Hero = ({ slice }: HeroProps): JSX.Element => {
         {slice.primary.paragraph}
       </p>
       <PrismicNextLink field={slice.primary.link}>
-        <AnimatedButton color={"primary"} size={"large"}>
+        <AnimatedButton color={"primary"} size={"large"} className={cn("border hover:border-black")}>
         {slice.primary.link_label}
         </AnimatedButton>
       </PrismicNextLink>
