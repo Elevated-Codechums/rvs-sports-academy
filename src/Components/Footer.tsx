@@ -55,10 +55,9 @@ export default async function Footer() {
 					>
 						{settings.data.navigations.map(
 							(nav, index) => (
-								<li>
+								<li key={index}>
 									<PrismicNextLink
 										className={cn("")}
-										key={index}
 										field={nav.link}
 									>
 										{nav.link_label}
