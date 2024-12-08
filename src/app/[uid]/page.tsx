@@ -51,13 +51,13 @@ export async function generateStaticParams() {
    * Query all Documents from the API, except the homepage.
    */
   const pages = await client.getAllByType("homepage", {
-    predicates: [prismic.filter.not("document.id", "home")],
+    predicates: [prismic.filter.not("my.page.uid", "home")],
   });
 
   /**
    * Define a path for every Document.
    */
   return pages.map((page) => {
-    return { uid: page.uid };
+    return { params: { uid: page.uid } };
   });
 }
