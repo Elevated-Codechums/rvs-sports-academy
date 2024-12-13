@@ -4,7 +4,7 @@ import type * as prismic from "@prismicio/client";
 
 type Simplify<T> = { [KeyType in keyof T]: T[KeyType] };
 
-type HomepageDocumentDataSlicesSlice = HeroSlice;
+type HomepageDocumentDataSlicesSlice = ProgramSlice | HeroSlice;
 
 /**
  * Content for Homepage documents
@@ -722,6 +722,210 @@ type HeroSliceVariation = HeroSliceDefault;
  */
 export type HeroSlice = prismic.SharedSlice<"hero", HeroSliceVariation>;
 
+/**
+ * Item in *Program → Default → Primary → Program Overview*
+ */
+export interface ProgramSliceDefaultPrimaryProgramOverviewItem {
+  /**
+   * Program Title field in *Program → Default → Primary → Program Overview*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: program.default.primary.program_overview[].program_title
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  program_title: prismic.KeyTextField;
+
+  /**
+   * Program Description field in *Program → Default → Primary → Program Overview*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: program.default.primary.program_overview[].program_description
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  program_description: prismic.RichTextField;
+
+  /**
+   * Program Image field in *Program → Default → Primary → Program Overview*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: program.default.primary.program_overview[].program_image
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  program_image: prismic.ImageField<never>;
+
+  /**
+   * CTA Text field in *Program → Default → Primary → Program Overview*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: program.default.primary.program_overview[].cta_text
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  cta_text: prismic.KeyTextField;
+
+  /**
+   * CTA Link field in *Program → Default → Primary → Program Overview*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: program.default.primary.program_overview[].cta_link
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  cta_link: prismic.LinkField;
+}
+
+/**
+ * Primary content in *Program → Default → Primary*
+ */
+export interface ProgramSliceDefaultPrimary {
+  /**
+   * Program Overview field in *Program → Default → Primary*
+   *
+   * - **Field Type**: Group
+   * - **Placeholder**: *None*
+   * - **API ID Path**: program.default.primary.program_overview[]
+   * - **Documentation**: https://prismic.io/docs/field#group
+   */
+  program_overview: prismic.GroupField<
+    Simplify<ProgramSliceDefaultPrimaryProgramOverviewItem>
+  >;
+}
+
+/**
+ * Default variation for Program Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type ProgramSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<ProgramSliceDefaultPrimary>,
+  never
+>;
+
+/**
+ * Slice variation for *Program*
+ */
+type ProgramSliceVariation = ProgramSliceDefault;
+
+/**
+ * Program Shared Slice
+ *
+ * - **API ID**: `program`
+ * - **Description**: Program
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type ProgramSlice = prismic.SharedSlice<
+  "program",
+  ProgramSliceVariation
+>;
+
+/**
+ * Item in *Programs → Default → Primary → Program Overview*
+ */
+export interface ProgramsSliceDefaultPrimaryProgramOverviewItem {
+  /**
+   * Program Title field in *Programs → Default → Primary → Program Overview*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: programs.default.primary.program_overview[].program_title
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  program_title: prismic.KeyTextField;
+
+  /**
+   * Program Description field in *Programs → Default → Primary → Program Overview*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: programs.default.primary.program_overview[].program_description
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  program_description: prismic.RichTextField;
+
+  /**
+   * Program Image field in *Programs → Default → Primary → Program Overview*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: programs.default.primary.program_overview[].program_image
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  program_image: prismic.ImageField<never>;
+
+  /**
+   * CTA Text field in *Programs → Default → Primary → Program Overview*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: programs.default.primary.program_overview[].cta_text
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  cta_text: prismic.KeyTextField;
+
+  /**
+   * CTA Link field in *Programs → Default → Primary → Program Overview*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: programs.default.primary.program_overview[].cta_link
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  cta_link: prismic.LinkField;
+}
+
+/**
+ * Primary content in *Programs → Default → Primary*
+ */
+export interface ProgramsSliceDefaultPrimary {
+  /**
+   * Program Overview field in *Programs → Default → Primary*
+   *
+   * - **Field Type**: Group
+   * - **Placeholder**: *None*
+   * - **API ID Path**: programs.default.primary.program_overview[]
+   * - **Documentation**: https://prismic.io/docs/field#group
+   */
+  program_overview: prismic.GroupField<
+    Simplify<ProgramsSliceDefaultPrimaryProgramOverviewItem>
+  >;
+}
+
+/**
+ * Default variation for Programs Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type ProgramsSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<ProgramsSliceDefaultPrimary>,
+  never
+>;
+
+/**
+ * Slice variation for *Programs*
+ */
+type ProgramsSliceVariation = ProgramsSliceDefault;
+
+/**
+ * Programs Shared Slice
+ *
+ * - **API ID**: `programs`
+ * - **Description**: Programs
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type ProgramsSlice = prismic.SharedSlice<
+  "programs",
+  ProgramsSliceVariation
+>;
+
 declare module "@prismicio/client" {
   interface CreateClient {
     (
@@ -773,6 +977,16 @@ declare module "@prismicio/client" {
       HeroSliceDefaultPrimary,
       HeroSliceVariation,
       HeroSliceDefault,
+      ProgramSlice,
+      ProgramSliceDefaultPrimaryProgramOverviewItem,
+      ProgramSliceDefaultPrimary,
+      ProgramSliceVariation,
+      ProgramSliceDefault,
+      ProgramsSlice,
+      ProgramsSliceDefaultPrimaryProgramOverviewItem,
+      ProgramsSliceDefaultPrimary,
+      ProgramsSliceVariation,
+      ProgramsSliceDefault,
     };
   }
 }

@@ -31,11 +31,11 @@ const Hero = ({ slice }: HeroProps): JSX.Element => {
       <h1 className={cn("text-4xl font-bold font-montserrat text-white")}>
         {slice.primary.title}
       </h1>
-      <p className={cn("text-lg font-roboto font-[500] w-[50%] text-white")}>
+      <p className={cn("text-lg text-center font-roboto font-[500] w-[50%] text-white")}>
         {slice.primary.paragraph}
       </p>
       <PrismicNextLink field={slice.primary.link}>
-        <AnimatedButton color={"primary"} size={"large"} className={cn("border hover:border-black")}>
+        <AnimatedButton color={"grassGreen"} size={"large"} className={cn("border hover:border-black")}>
         {slice.primary.link_label}
         </AnimatedButton>
       </PrismicNextLink>
