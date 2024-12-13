@@ -7,4 +7,5 @@ export const components = {
   contact: dynamic(() => import("./Contact")),
   content_list: dynamic(() => import("./ContentList")),
   hero: dynamic(() => import("./Hero")),
+  program: dynamic(() => import("./Program")),
 };

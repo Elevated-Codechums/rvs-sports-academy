@@ -1,0 +1,69 @@
+{
+  "id": "program",
+  "type": "SharedSlice",
+  "name": "Program",
+  "description": "Program",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "program_overview": {
+          "type": "Group",
+          "config": {
+            "label": "Program Overview",
+            "repeat": true,
+            "fields": {
+              "program_title": {
+                "type": "Text",
+                "config": {
+                  "label": "Program Title",
+                  "placeholder": ""
+                }
+              },
+              "program_description": {
+                "type": "StructuredText",
+                "config": {
+                  "label": "Program Description",
+                  "placeholder": "",
+                  "allowTargetBlank": true,
+                  "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+                }
+              },
+              "program_image": {
+                "type": "Image",
+                "config": {
+                  "label": "Program Image",
+                  "constraint": {},
+                  "thumbnails": []
+                }
+              },
+              "cta_text": {
+                "type": "Text",
+                "config": {
+                  "label": "CTA Text",
+                  "placeholder": ""
+                }
+              },
+              "cta_link": {
+                "type": "Link",
+                "config": {
+                  "label": "CTA Link",
+                  "placeholder": "",
+                  "allowTargetBlank": true,
+                  "select": null,
+                  "allowText": true
+                }
+              }
+            }
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

@@ -2,7 +2,8 @@ import { cn } from "@/libs/utils";
 
 import { createClient } from "@/prismicio";
 import { PrismicNextImage, PrismicNextLink } from "@prismicio/next";
-import {Button} from "./Utils/Button";
+import { Button, LinkButton } from "./Utils/Button";
+import Link from "next/link";
 
 export default async function Footer() {
 	const client = createClient();
@@ -12,7 +13,7 @@ export default async function Footer() {
 	return (
 		<footer
 			className={cn(
-				"px-40 flex flex-col items-center justify-between w-full bg-black text-white py-10 gap-10"
+				"px-40 flex flex-col items-center justify-between w-full bg-background text-black py-10 gap-10 border-t-deepBlue border-2"
 			)}
 		>
 			<div className={cn("w-full flex items-center justify-between")}>
@@ -45,7 +46,9 @@ export default async function Footer() {
 							Quick Links
 						</h5>
 						<div
-							className={cn("w-[50%] h-1 rounded-lg bg-white")}
+							className={cn(
+								"w-[50%] h-1 rounded-lg bg-gradient-to-r from-deepBlue to-basketballOrange"
+							)}
 						></div>
 					</div>
 					<ul
@@ -60,7 +63,12 @@ export default async function Footer() {
 										className={cn("")}
 										field={nav.link}
 									>
-										{nav.link_label}
+										<LinkButton
+											color="basketballOrangeDark"
+											size="small"
+										>
+											{nav.link_label}
+										</LinkButton>
 									</PrismicNextLink>
 								</li>
 							),
@@ -74,7 +82,11 @@ export default async function Footer() {
 					"w-full font-outfit flex flex-col items-start justify-start gap-5"
 				)}
 			>
-				<div className={cn("w-full h-1 rounded-lg bg-white")}></div>
+				<div
+					className={cn(
+						"w-full h-1 rounded-lg bg-gradient-to-r from-deepBlue to-basketballOrange"
+					)}
+				></div>
 				<div className="flex items-center justify-between w-full">
 					<div>
 						<p>
@@ -84,25 +96,33 @@ export default async function Footer() {
 						<p>Made with ❤️ by Elevated CodeChums</p>
 					</div>
 					<div className="flex flex-col items-start justify-between gap-5">
-						<div className={cn("flex items-start justify-start flex-col gap-1")}>
+						<div
+							className={cn(
+								"flex items-start justify-start flex-col gap-1"
+							)}
+						>
 							<h5
 								className={cn(
-									"text-xl font-montserrat font-bold"
+									"text-xl font-montserrat font-bold text-basketballOrange"
 								)}
 							>
 								Contact Us
 							</h5>
 							<div
 								className={cn(
-									"w-[30%] h-1 rounded-lg bg-white"
+									"w-[30%] h-1 rounded-lg bg-gradient-to-r from-deepBlue to-basketballOrange"
 								)}
 							></div>
 						</div>
-						<div className={cn("flex items-center justify-normal gap-3")}>
+						<div
+							className={cn(
+								"flex items-center justify-normal gap-3"
+							)}
+						>
 							<PrismicNextLink
 								field={settings.data.contact_email}
 							>
-								<Button color="outline_secondary" size="small">
+								<Button color="grassGreen" size="small">
 									{settings.data.contact_email_label}
 								</Button>
 							</PrismicNextLink>
@@ -110,7 +130,7 @@ export default async function Footer() {
 								field={settings.data.contact_number}
 							>
 								<Button
-									color="outline_secondary"
+									color="grassGreen"
 									size="small"
 									className={cn("")}
 								>
