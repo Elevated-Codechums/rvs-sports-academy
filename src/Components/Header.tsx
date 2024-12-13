@@ -1,7 +1,7 @@
 import { cn } from "@/libs/utils";
 import { createClient } from "@/prismicio";
 import { PrismicNextImage, PrismicNextLink } from "@prismicio/next";
-import { Button } from "./Utils/Button";
+import { Button } from "@/Components/Utils/Button";
 
 export default async function Header() {
 	const client = createClient();
@@ -47,7 +47,7 @@ export default async function Header() {
 				)}
 			</div>
 			<div>
-				<Button color="secondary" size="small">
+				<Button color="secondary" size="small" className={cn("border border-black hover:border hover:border-white")}>
 					<PrismicNextLink field={settings.data.cta_link}>
 						{settings.data.cta_text}
 					</PrismicNextLink>

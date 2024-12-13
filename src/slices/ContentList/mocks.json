@@ -1,0 +1,19 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"content_type": {
+				"__TYPE__": "FieldContent",
+				"value": "Our Programs",
+				"type": "Select"
+			},
+			"view_more_text": {
+				"__TYPE__": "FieldContent",
+				"value": "die",
+				"type": "Text"
+			}
+		},
+		"items": []
+	}
+]

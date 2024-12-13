@@ -586,6 +586,61 @@ export type ContactSlice = prismic.SharedSlice<
 >;
 
 /**
+ * Primary content in *ContentList → Default → Primary*
+ */
+export interface ContentListSliceDefaultPrimary {
+  /**
+   * Content Type field in *ContentList → Default → Primary*
+   *
+   * - **Field Type**: Select
+   * - **Placeholder**: *None*
+   * - **API ID Path**: content_list.default.primary.content_type
+   * - **Documentation**: https://prismic.io/docs/field#select
+   */
+  content_type: prismic.SelectField<"Blogs" | "Our Programs">;
+
+  /**
+   * View More Text field in *ContentList → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: content_list.default.primary.view_more_text
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  view_more_text: prismic.KeyTextField;
+}
+
+/**
+ * Default variation for ContentList Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type ContentListSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<ContentListSliceDefaultPrimary>,
+  never
+>;
+
+/**
+ * Slice variation for *ContentList*
+ */
+type ContentListSliceVariation = ContentListSliceDefault;
+
+/**
+ * ContentList Shared Slice
+ *
+ * - **API ID**: `content_list`
+ * - **Description**: ContentList
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type ContentListSlice = prismic.SharedSlice<
+  "content_list",
+  ContentListSliceVariation
+>;
+
+/**
  * Primary content in *Hero → Default → Primary*
  */
 export interface HeroSliceDefaultPrimary {
@@ -710,6 +765,10 @@ declare module "@prismicio/client" {
       ContactSliceDefaultPrimary,
       ContactSliceVariation,
       ContactSliceDefault,
+      ContentListSlice,
+      ContentListSliceDefaultPrimary,
+      ContentListSliceVariation,
+      ContentListSliceDefault,
       HeroSlice,
       HeroSliceDefaultPrimary,
       HeroSliceVariation,
