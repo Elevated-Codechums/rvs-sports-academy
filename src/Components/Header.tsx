@@ -1,6 +1,7 @@
 import { cn } from "@/libs/utils";
 import { createClient } from "@/prismicio";
 import { PrismicNextImage, PrismicNextLink } from "@prismicio/next";
+import { Button } from "./Utils/Button";
 
 export default async function Header() {
 	const client = createClient();
@@ -10,7 +11,7 @@ export default async function Header() {
 	return (
 		<header
 			className={cn(
-				"fixed top-0 left-0 z-50 h-[80px] w-full flex items-center justify-between px-40 bg-black text-white"
+				"sticky top-0 left-0 z-50 h-[80px] w-full flex items-center justify-between px-40 bg-black text-white"
 			)}
 		>
 			<div className={cn("text-3xl font-montserrat font-bold")}>
@@ -44,6 +45,13 @@ export default async function Header() {
 					),
 					[]
 				)}
+			</div>
+			<div>
+				<Button color="secondary" size="small">
+					<PrismicNextLink field={settings.data.cta_link}>
+						{settings.data.cta_text}
+					</PrismicNextLink>
+				</Button>
 			</div>
 		</header>
 	);

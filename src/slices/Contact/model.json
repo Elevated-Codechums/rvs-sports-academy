@@ -1,0 +1,120 @@
+{
+  "id": "contact",
+  "type": "SharedSlice",
+  "name": "Contact",
+  "description": "Contact",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "details": {
+          "type": "Group",
+          "config": {
+            "label": "Details",
+            "repeat": true,
+            "fields": {
+              "title": {
+                "type": "StructuredText",
+                "config": {
+                  "label": "Title",
+                  "placeholder": "",
+                  "allowTargetBlank": true,
+                  "multi": "heading3,strong,em"
+                }
+              },
+              "detail_link": {
+                "type": "Link",
+                "config": {
+                  "label": "Detail Link",
+                  "placeholder": "",
+                  "allowTargetBlank": true,
+                  "select": null,
+                  "allowText": true
+                }
+              },
+              "detail_icon": {
+                "type": "Image",
+                "config": {
+                  "label": "Detail Icon",
+                  "constraint": {},
+                  "thumbnails": []
+                }
+              }
+            }
+          }
+        },
+        "offices": {
+          "type": "Group",
+          "config": {
+            "label": "Offices",
+            "repeat": true,
+            "fields": {
+              "name": {
+                "type": "Text",
+                "config": {
+                  "label": "Name",
+                  "placeholder": ""
+                }
+              },
+              "address": {
+                "type": "StructuredText",
+                "config": {
+                  "label": "Address",
+                  "placeholder": "",
+                  "allowTargetBlank": true,
+                  "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+                }
+              },
+              "location_coordinates": {
+                "type": "GeoPoint",
+                "config": {
+                  "label": "Location Coordinates"
+                }
+              }
+            }
+          }
+        },
+        "socials": {
+          "type": "Group",
+          "config": {
+            "label": "Socials",
+            "repeat": true,
+            "fields": {
+              "social_name": {
+                "type": "Text",
+                "config": {
+                  "label": "Social Name",
+                  "placeholder": ""
+                }
+              },
+              "social_link": {
+                "type": "Link",
+                "config": {
+                  "label": "Social Link",
+                  "placeholder": "",
+                  "allowTargetBlank": true,
+                  "select": null,
+                  "allowText": true
+                }
+              },
+              "social_image": {
+                "type": "Image",
+                "config": {
+                  "label": "Social Image",
+                  "constraint": {},
+                  "thumbnails": []
+                }
+              }
+            }
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

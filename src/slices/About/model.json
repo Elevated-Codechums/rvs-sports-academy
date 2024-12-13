@@ -1,0 +1,46 @@
+{
+  "id": "about",
+  "type": "SharedSlice",
+  "name": "About",
+  "description": "About",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "topics": {
+          "type": "Group",
+          "config": {
+            "label": "Topics",
+            "repeat": true,
+            "fields": {
+              "topic_title": {
+                "type": "StructuredText",
+                "config": {
+                  "label": "Topic Title",
+                  "placeholder": "",
+                  "allowTargetBlank": false,
+                  "single": "strong,em,heading3"
+                }
+              },
+              "topic_description": {
+                "type": "StructuredText",
+                "config": {
+                  "label": "Topic Description",
+                  "placeholder": "",
+                  "allowTargetBlank": true,
+                  "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+                }
+              }
+            }
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}
