@@ -5,7 +5,7 @@ import { outfit, roboto, montserrat } from "@/libs/fonts";
 import { cn } from "@/libs/utils";
 import Header from "@/Components/Header";
 import Footer from "@/Components/Footer";
-import { Metadata, ResolvingMetadata } from "next";
+import { Metadata } from "next";
 import "./globals.css";
 
 

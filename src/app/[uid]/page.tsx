@@ -14,49 +14,45 @@ type Params = { uid: string };
  */
 
 export async function generateMetadata({
-  params,
+	params,
 }: {
-  params: Promise<Params>;
+	params: Promise<Params>;
 }): Promise<Metadata> {
-  const { uid } = await params;
-  const client = createClient();
-  const page = await client.getByUID("page", uid).catch(() => notFound());
+	const { uid } = await params;
+	const client = createClient();
+	const page = await client.getByUID("page", uid).catch(() => notFound());
 
-  return {
-    title: prismic.asText(page.data.title),
-    description: page.data.meta_description,
-    openGraph: {
-      title: page.data.meta_title || undefined,
-      images: [
-        {
-          url: page.data.meta_image.url || "",
-        },
-      ],
-    },
-  };
+	return {
+		title: `${page.data.meta_title} | RVS Sports Academy`,
+		description: page.data.meta_description,
+		openGraph: {
+			title: page.data.meta_title || undefined,
+			images: [
+				{
+					url: page.data.meta_image.url || "",
+				},
+			],
+		},
+	};
 }
 
 export default async function Page({ params }: { params: Promise<Params> }) {
-  const { uid } = await params;
-  const client = createClient();
-  const page = await client.getByUID("page", uid).catch(() => notFound());
+	const { uid } = await params;
+	const client = createClient();
+	const page = await client.getByUID("page", uid).catch(() => notFound());
 
-  return <SliceZone slices={page.data.slices} components={components} />;
+	return <SliceZone slices={page.data.slices} components={components} />;
 }
 
 export async function generateStaticParams() {
   const client = createClient();
 
-  /**
-   * Query all Documents from the API, except the homepage.
-   */
+  // Query all Documents from the API, except the homepage.
   const pages = await client.getAllByType("page", {
-    predicates: [prismic.filter.not("my.page.uid", "home")],
+    predicates: [prismic.filter.not("my.page.uid", "page")],
   });
 
-  /**
-   * Define a path for every Document.
-   */
+  // Define a path for every Document.
   return pages.map((page) => {
     return { uid: page.uid };
   });
