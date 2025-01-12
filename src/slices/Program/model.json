@@ -12,51 +12,98 @@
       "description": "Default",
       "imageUrl": "",
       "primary": {
-        "program_overview": {
+        "image": {
+          "type": "Image",
+          "config": {
+            "label": "Image",
+            "constraint": {},
+            "thumbnails": []
+          }
+        },
+        "sub_heading": {
+          "type": "Text",
+          "config": {
+            "label": "Sub Heading",
+            "placeholder": ""
+          }
+        },
+        "heading": {
+          "type": "Text",
+          "config": {
+            "label": "Heading",
+            "placeholder": ""
+          }
+        },
+        "description": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Description",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+          }
+        },
+        "basketball_card": {
           "type": "Group",
           "config": {
-            "label": "Program Overview",
+            "label": "Basketball Card",
             "repeat": true,
             "fields": {
-              "program_title": {
-                "type": "Text",
-                "config": {
-                  "label": "Program Title",
-                  "placeholder": ""
-                }
-              },
-              "program_description": {
-                "type": "StructuredText",
-                "config": {
-                  "label": "Program Description",
-                  "placeholder": "",
-                  "allowTargetBlank": true,
-                  "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
-                }
-              },
-              "program_image": {
+              "basketball_card_image": {
                 "type": "Image",
                 "config": {
-                  "label": "Program Image",
+                  "label": "Basketball Card Image",
                   "constraint": {},
                   "thumbnails": []
                 }
               },
-              "cta_text": {
+              "basketball_card_heading": {
                 "type": "Text",
                 "config": {
-                  "label": "CTA Text",
+                  "label": "Basketball Card Heading",
                   "placeholder": ""
                 }
               },
-              "cta_link": {
-                "type": "Link",
+              "basketball_card_description": {
+                "type": "StructuredText",
                 "config": {
-                  "label": "CTA Link",
+                  "label": "Basketball Card Description",
                   "placeholder": "",
                   "allowTargetBlank": true,
-                  "select": null,
-                  "allowText": true
+                  "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+                }
+              }
+            }
+          }
+        },
+        "community_card": {
+          "type": "Group",
+          "config": {
+            "label": "Community Card ",
+            "repeat": true,
+            "fields": {
+              "community_card_image": {
+                "type": "Image",
+                "config": {
+                  "label": "Community Card Image",
+                  "constraint": {},
+                  "thumbnails": []
+                }
+              },
+              "community_card_heading": {
+                "type": "Text",
+                "config": {
+                  "label": "Community Card Heading",
+                  "placeholder": ""
+                }
+              },
+              "community_card_description": {
+                "type": "StructuredText",
+                "config": {
+                  "label": "Community Card Description",
+                  "placeholder": "",
+                  "allowTargetBlank": true,
+                  "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
                 }
               }
             }

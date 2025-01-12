@@ -1,13 +1,12 @@
 import { PrismicPreview } from "@prismicio/next";
 import { repositoryName } from "@/prismicio";
 import { createClient } from "@/prismicio";
-import { outfit, roboto, montserrat } from "@/libs/fonts";
+import { outfit, roboto, montserrat, oswald } from "@/libs/fonts";
 import { cn } from "@/libs/utils";
 import Header from "@/Components/Header";
 import Footer from "@/Components/Footer";
 import { Metadata } from "next";
 import "./globals.css";
-
 
 export async function generateMetadata(): Promise<Metadata> {
   const client = createClient();
@@ -29,22 +28,19 @@ export async function generateMetadata(): Promise<Metadata> {
   }
 }
 
-
-
-
 export default function RootLayout({
-	children,
+  children,
 }: Readonly<{
-	children: React.ReactNode;
+  children: React.ReactNode;
 }>) {
-	return (
-		<html lang="en">
-			<body className={cn(outfit, roboto, montserrat, "antialiased")}>
+  return (
+    <html lang="en">
+      <body className={cn(outfit, roboto, montserrat, oswald, "antialiased")}>
         <Header />
-				{children}
+        {children}
         <Footer />
-			</body>
-			<PrismicPreview repositoryName={repositoryName} />
-		</html>
-	);
+      </body>
+      <PrismicPreview repositoryName={repositoryName} />
+    </html>
+  );
 }
