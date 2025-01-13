@@ -31,6 +31,7 @@ const Gallery = ({ slice }: GalleryProps): JSX.Element => {
         >
           <div>
             <PrismicNextImage
+            alt=""
               className={cn("w-[1300px] p-10 h-full")}
               field={slice.primary.image}
             />
@@ -38,7 +39,7 @@ const Gallery = ({ slice }: GalleryProps): JSX.Element => {
           <div>
             {slice.primary.gallery_text.map((text, index) => (
               <div className={cn("h-1/2 w-3/4")}>
-                <PrismicNextImage field={text.image} />
+                <PrismicNextImage alt="" field={text.image} />
               </div>
             ))}
           </div>
@@ -47,14 +48,17 @@ const Gallery = ({ slice }: GalleryProps): JSX.Element => {
           {slice.primary.gallery_image.map((image, index) => (
             <div className={cn("flex flex-row justify-center")} key={index}>
               <PrismicNextImage
+                alt=""
                 className={cn("w-[350px] p-10 h-1/2")}
                 field={image.image}
               />
               <PrismicNextImage
+                alt=""
                 className={cn("w-[350px] p-10 h-1/2")}
                 field={image.image2}
               />
               <PrismicNextImage
+                alt=""
                 className={cn("w-[350px] p-10 h-1/2")}
                 field={image.image3}
               />
@@ -65,10 +69,10 @@ const Gallery = ({ slice }: GalleryProps): JSX.Element => {
           {slice.primary.gallery_description.map((description, index) => (
             <div className={cn("flex flex-row  justify-evenly")} key={index}>
               <div className={cn("w-1/3")}>
-                <PrismicNextImage field={description.image} />
+                <PrismicNextImage alt="" field={description.image} />
               </div>
               <div className={cn("w-[25%] gap-y-20 h-1/2 mt-60 ")}>
-                <PrismicNextImage field={description.image2} />
+                <PrismicNextImage alt="" field={description.image2} />
                 <PrismicRichText field={description.image_description} />
                 <h1 className={cn("mt-8 tracking-widest text-3xl text-blacksmoke font-bold")}>{description.name}</h1>
                 <h1 className={cn("mt-4 tracking-widest text-xl text-basketballOrange font-bold")}>{description.position}</h1>
