@@ -1294,98 +1294,143 @@ export type ProgramSlice = prismic.SharedSlice<
 >;
 
 /**
- * Item in *Team → Default → Primary → Sub Title*
+ * Item in *Team → Default → Primary → Coach1*
  */
-export interface TeamSliceDefaultPrimarySubTitleItem {
+export interface TeamSliceDefaultPrimaryCoach1Item {
   /**
-   * Image field in *Team → Default → Primary → Sub Title*
+   * Image field in *Team → Default → Primary → Coach1*
    *
    * - **Field Type**: Image
    * - **Placeholder**: *None*
-   * - **API ID Path**: team.default.primary.sub_title[].image
+   * - **API ID Path**: team.default.primary.coach1[].image
    * - **Documentation**: https://prismic.io/docs/field#image
    */
   image: prismic.ImageField<never>;
 
   /**
-   * Title field in *Team → Default → Primary → Sub Title*
+   * Title field in *Team → Default → Primary → Coach1*
    *
    * - **Field Type**: Text
    * - **Placeholder**: *None*
-   * - **API ID Path**: team.default.primary.sub_title[].title
+   * - **API ID Path**: team.default.primary.coach1[].title
    * - **Documentation**: https://prismic.io/docs/field#key-text
    */
   title: prismic.KeyTextField;
 
   /**
-   * Heading field in *Team → Default → Primary → Sub Title*
+   * Heading field in *Team → Default → Primary → Coach1*
    *
    * - **Field Type**: Text
    * - **Placeholder**: *None*
-   * - **API ID Path**: team.default.primary.sub_title[].heading
+   * - **API ID Path**: team.default.primary.coach1[].heading
    * - **Documentation**: https://prismic.io/docs/field#key-text
    */
   heading: prismic.KeyTextField;
 }
 
 /**
- * Item in *Team → Default → Primary → Paragraph*
+ * Item in *Team → Default → Primary → Coach2*
  */
-export interface TeamSliceDefaultPrimaryParagraphItem {
+export interface TeamSliceDefaultPrimaryCoach2Item {
   /**
-   * Heading field in *Team → Default → Primary → Paragraph*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: team.default.primary.paragraph[].heading
-   * - **Documentation**: https://prismic.io/docs/field#key-text
-   */
-  heading: prismic.KeyTextField;
-
-  /**
-   * Description field in *Team → Default → Primary → Paragraph*
-   *
-   * - **Field Type**: Rich Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: team.default.primary.paragraph[].description
-   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
-   */
-  description: prismic.RichTextField;
-
-  /**
-   * Link label field in *Team → Default → Primary → Paragraph*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: team.default.primary.paragraph[].link_label
-   * - **Documentation**: https://prismic.io/docs/field#key-text
-   */
-  link_label: prismic.KeyTextField;
-
-  /**
-   * Link field in *Team → Default → Primary → Paragraph*
-   *
-   * - **Field Type**: Link
-   * - **Placeholder**: *None*
-   * - **API ID Path**: team.default.primary.paragraph[].link
-   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
-   */
-  link: prismic.LinkField;
-}
-
-/**
- * Item in *Team → Default → Primary → Image*
- */
-export interface TeamSliceDefaultPrimaryImageItem {
-  /**
-   * Image field in *Team → Default → Primary → Image*
+   * Image field in *Team → Default → Primary → Coach2*
    *
    * - **Field Type**: Image
    * - **Placeholder**: *None*
-   * - **API ID Path**: team.default.primary.image[].image
+   * - **API ID Path**: team.default.primary.coach2[].image
    * - **Documentation**: https://prismic.io/docs/field#image
    */
   image: prismic.ImageField<never>;
+
+  /**
+   * Title field in *Team → Default → Primary → Coach2*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: team.default.primary.coach2[].title
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  title: prismic.KeyTextField;
+
+  /**
+   * Heading field in *Team → Default → Primary → Coach2*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: team.default.primary.coach2[].heading
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  heading: prismic.KeyTextField;
+}
+
+/**
+ * Item in *Team → Default → Primary → Coach3*
+ */
+export interface TeamSliceDefaultPrimaryCoach3Item {
+  /**
+   * Image field in *Team → Default → Primary → Coach3*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: team.default.primary.coach3[].image
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  image: prismic.ImageField<never>;
+
+  /**
+   * Title field in *Team → Default → Primary → Coach3*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: team.default.primary.coach3[].title
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  title: prismic.KeyTextField;
+
+  /**
+   * Heading field in *Team → Default → Primary → Coach3*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: team.default.primary.coach3[].heading
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  heading: prismic.KeyTextField;
+}
+
+/**
+ * Item in *Team → Default → Primary → Coach4*
+ */
+export interface TeamSliceDefaultPrimaryCoach4Item {
+  /**
+   * Image field in *Team → Default → Primary → Coach4*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: team.default.primary.coach4[].image
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  image: prismic.ImageField<never>;
+
+  /**
+   * Title field in *Team → Default → Primary → Coach4*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: team.default.primary.coach4[].title
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  title: prismic.KeyTextField;
+
+  /**
+   * Heading field in *Team → Default → Primary → Coach4*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: team.default.primary.coach4[].heading
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  heading: prismic.KeyTextField;
 }
 
 /**
@@ -1393,34 +1438,54 @@ export interface TeamSliceDefaultPrimaryImageItem {
  */
 export interface TeamSliceDefaultPrimary {
   /**
-   * Sub Title field in *Team → Default → Primary*
+   * Heading field in *Team → Default → Primary*
    *
-   * - **Field Type**: Group
+   * - **Field Type**: Text
    * - **Placeholder**: *None*
-   * - **API ID Path**: team.default.primary.sub_title[]
-   * - **Documentation**: https://prismic.io/docs/field#group
+   * - **API ID Path**: team.default.primary.heading
+   * - **Documentation**: https://prismic.io/docs/field#key-text
    */
-  sub_title: prismic.GroupField<Simplify<TeamSliceDefaultPrimarySubTitleItem>>;
+  heading: prismic.KeyTextField;
 
   /**
-   * Paragraph field in *Team → Default → Primary*
+   * Coach1 field in *Team → Default → Primary*
    *
    * - **Field Type**: Group
    * - **Placeholder**: *None*
-   * - **API ID Path**: team.default.primary.paragraph[]
+   * - **API ID Path**: team.default.primary.coach1[]
    * - **Documentation**: https://prismic.io/docs/field#group
    */
-  paragraph: prismic.GroupField<Simplify<TeamSliceDefaultPrimaryParagraphItem>>;
+  coach1: prismic.GroupField<Simplify<TeamSliceDefaultPrimaryCoach1Item>>;
 
   /**
-   * Image field in *Team → Default → Primary*
+   * Coach2 field in *Team → Default → Primary*
    *
    * - **Field Type**: Group
    * - **Placeholder**: *None*
-   * - **API ID Path**: team.default.primary.image[]
+   * - **API ID Path**: team.default.primary.coach2[]
    * - **Documentation**: https://prismic.io/docs/field#group
    */
-  image: prismic.GroupField<Simplify<TeamSliceDefaultPrimaryImageItem>>;
+  coach2: prismic.GroupField<Simplify<TeamSliceDefaultPrimaryCoach2Item>>;
+
+  /**
+   * Coach3 field in *Team → Default → Primary*
+   *
+   * - **Field Type**: Group
+   * - **Placeholder**: *None*
+   * - **API ID Path**: team.default.primary.coach3[]
+   * - **Documentation**: https://prismic.io/docs/field#group
+   */
+  coach3: prismic.GroupField<Simplify<TeamSliceDefaultPrimaryCoach3Item>>;
+
+  /**
+   * Coach4 field in *Team → Default → Primary*
+   *
+   * - **Field Type**: Group
+   * - **Placeholder**: *None*
+   * - **API ID Path**: team.default.primary.coach4[]
+   * - **Documentation**: https://prismic.io/docs/field#group
+   */
+  coach4: prismic.GroupField<Simplify<TeamSliceDefaultPrimaryCoach4Item>>;
 }
 
 /**
@@ -1600,9 +1665,10 @@ declare module "@prismicio/client" {
       ProgramSliceVariation,
       ProgramSliceDefault,
       TeamSlice,
-      TeamSliceDefaultPrimarySubTitleItem,
-      TeamSliceDefaultPrimaryParagraphItem,
-      TeamSliceDefaultPrimaryImageItem,
+      TeamSliceDefaultPrimaryCoach1Item,
+      TeamSliceDefaultPrimaryCoach2Item,
+      TeamSliceDefaultPrimaryCoach3Item,
+      TeamSliceDefaultPrimaryCoach4Item,
       TeamSliceDefaultPrimary,
       TeamSliceVariation,
       TeamSliceDefault,
