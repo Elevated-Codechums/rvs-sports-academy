@@ -58,3 +58,61 @@ export default async function Header() {
 		</header>
 	);
 }
+//
+import Link from "next/link";
+
+// export default async function Navbar() {
+//   const client = createClient();
+//   const settings = await client.getSingle("settings");
+
+//   return (
+//     <nav className="bg-white text-black">
+//       <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
+//         <div className="flex justify-between items-center py-4">
+//           {/* Logo */}
+//           <div className="flex-shrink-0">
+//             <PrismicNextImage
+//               width={50}
+//               height={50}
+//               field={settings.data.site_logo}
+//               alt=""
+//             />
+//           </div>
+//           {/* Menu Items */}
+//           <div className="hidden  md:flex space-x-8">
+//             <PrismicNextLink
+//               className="text-black border-l border-blacksmoke pl-4 hover:text-basketballOrange"
+//               href="/about"
+//             >
+//               ABOUT
+//             </PrismicNextLink>
+//             <PrismicNextLink
+//               className="text-black border-l border-blacksmoke pl-4 hover:text-basketballOrange"
+//               href="/our-player"
+//             >
+//               OUR PLAYER
+//             </PrismicNextLink>
+//             <PrismicNextLink
+//               className="text-black border-l border-blacksmoke pl-4 hover:text-basketballOrange"
+//               href="/our-training"
+//             >
+//               OUR TRAINING
+//             </PrismicNextLink>
+//             <PrismicNextLink
+//               className="text-black border-l border-blacksmoke pl-4 hover:text-basketballOrange"
+//               href="/photo-gallery"
+//             >
+//               PHOTO GALLERY
+//             </PrismicNextLink>
+//             <PrismicNextLink
+//               className="text-black border-l border-blacksmoke pl-4 hover:text-basketballOrange"
+//               href="/contact-us"
+//             >
+//               CONTACT
+//             </PrismicNextLink>
+//           </div>
+//         </div>
+//       </div>
+//     </nav>
+//   );
+// }

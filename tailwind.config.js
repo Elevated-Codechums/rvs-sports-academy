@@ -14,11 +14,13 @@ module.exports = {
 				outfit: ["var(--font-outfit)"],
 				roboto: ["var(--font-roboto)"],
 				montserrat: ["var(--font-montserrat)"],
+				oswald: ["var(--font-oswald)"],
 			},
 			colors: {
 				// Primary colors for basketball theme
 				basketballOrange: "#E75719",
 				deepBlue: "#17408B",
+				blacksmoke:"#4C4D4F",
 
 				// Secondary colors for football and cricket
 				grassGreen: "#88B04B",
@@ -41,7 +43,7 @@ module.exports = {
 				success: "#2A9D8F", // A calm green for success messages
 				warning: "#FFC107", // A bright yellow for warnings
 				info: "#00BFFF", // A light blue for information
-				background: "#F5F5F5", // A soft gray for background
+				background: "#FFFFFF", // A soft gray for background
 				textPrimary: "#212121", // Dark gray for primary text
 				textSecondary: "#757575", // Medium gray for secondary text
 			},

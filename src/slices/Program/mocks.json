@@ -3,46 +3,68 @@
 		"__TYPE__": "SharedSliceContent",
 		"variation": "default",
 		"primary": {
-			"program_overview": {
+			"image": {
+				"origin": {
+					"id": "main",
+					"url": "https://images.unsplash.com/photo-1601933973783-43cf8a7d4c5f",
+					"width": 6597,
+					"height": 4398
+				},
+				"url": "https://images.unsplash.com/photo-1601933973783-43cf8a7d4c5f",
+				"width": 6597,
+				"height": 4398,
+				"edit": {
+					"zoom": 1,
+					"crop": {
+						"x": 0,
+						"y": 0
+					},
+					"background": "transparent"
+				},
+				"credits": null,
+				"alt": null,
+				"__TYPE__": "ImageContent",
+				"thumbnails": {}
+			},
+			"sub_heading": {
+				"__TYPE__": "FieldContent",
+				"value": "as",
+				"type": "Text"
+			},
+			"heading": {
+				"__TYPE__": "FieldContent",
+				"value": "among",
+				"type": "Text"
+			},
+			"description": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Aliqua velit nisi in pariatur incididunt ex eu nostrud eiusmod incididunt cupidatat veniam."
+						}
+					}
+				]
+			},
+			"basketball_card": {
 				"__TYPE__": "GroupContentType",
 				"value": [
 					{
 						"__TYPE__": "GroupItemContent",
 						"value": [
 							[
-								"program_title",
-								{
-									"__TYPE__": "FieldContent",
-									"value": "clock",
-									"type": "Text"
-								}
-							],
-							[
-								"program_description",
-								{
-									"__TYPE__": "StructuredTextContent",
-									"value": [
-										{
-											"type": "paragraph",
-											"content": {
-												"text": "Quis dolore labore non mollit aliquip nulla sint. Nostrud cupidatat amet pariatur occaecat aliqua deserunt deserunt excepteur."
-											}
-										}
-									]
-								}
-							],
-							[
-								"program_image",
+								"basketball_card_image",
 								{
 									"origin": {
 										"id": "main",
-										"url": "https://images.unsplash.com/photo-1496181133206-80ce9b88a853",
-										"width": 5243,
-										"height": 3495
+										"url": "https://images.unsplash.com/photo-1547082299-de196ea013d6",
+										"width": 4272,
+										"height": 2848
 									},
-									"url": "https://images.unsplash.com/photo-1496181133206-80ce9b88a853",
-									"width": 5243,
-									"height": 3495,
+									"url": "https://images.unsplash.com/photo-1547082299-de196ea013d6",
+									"width": 4272,
+									"height": 2848,
 									"edit": {
 										"zoom": 1,
 										"crop": {
@@ -58,23 +80,83 @@
 								}
 							],
 							[
-								"cta_text",
+								"basketball_card_heading",
 								{
 									"__TYPE__": "FieldContent",
-									"value": "ate",
+									"value": "older",
 									"type": "Text"
 								}
 							],
 							[
-								"cta_link",
+								"basketball_card_description",
 								{
-									"__TYPE__": "LinkContent",
-									"key": "38adcec7-ff49-431e-9135-3398a7e0a4d4",
-									"value": {
-										"__TYPE__": "ExternalLink",
-										"url": "http://google.com",
-										"text": "owner"
-									}
+									"__TYPE__": "StructuredTextContent",
+									"value": [
+										{
+											"type": "paragraph",
+											"content": {
+												"text": "Ea incididunt nisi id enim dolore ex consequat esse mollit in fugiat quis culpa dolore incididunt."
+											}
+										}
+									]
+								}
+							]
+						]
+					}
+				]
+			},
+			"community_card": {
+				"__TYPE__": "GroupContentType",
+				"value": [
+					{
+						"__TYPE__": "GroupItemContent",
+						"value": [
+							[
+								"community_card_image",
+								{
+									"origin": {
+										"id": "main",
+										"url": "https://images.unsplash.com/photo-1601933973783-43cf8a7d4c5f",
+										"width": 6597,
+										"height": 4398
+									},
+									"url": "https://images.unsplash.com/photo-1601933973783-43cf8a7d4c5f",
+									"width": 6597,
+									"height": 4398,
+									"edit": {
+										"zoom": 1,
+										"crop": {
+											"x": 0,
+											"y": 0
+										},
+										"background": "transparent"
+									},
+									"credits": null,
+									"alt": null,
+									"__TYPE__": "ImageContent",
+									"thumbnails": {}
+								}
+							],
+							[
+								"community_card_heading",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "roll",
+									"type": "Text"
+								}
+							],
+							[
+								"community_card_description",
+								{
+									"__TYPE__": "StructuredTextContent",
+									"value": [
+										{
+											"type": "paragraph",
+											"content": {
+												"text": "Consequat occaecat proident reprehenderit sint elit ea non. Esse exercitation reprehenderit ut eiusmod veniam ut. Veniam dolore ipsum duis minim sint dolor."
+											}
+										}
+									]
 								}
 							]
 						]
