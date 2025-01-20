@@ -1,0 +1,67 @@
+{
+  "id": "free_trial",
+  "type": "SharedSlice",
+  "name": "FreeTrial",
+  "description": "FreeTrial",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "title": {
+          "type": "Group",
+          "config": {
+            "label": "Title",
+            "repeat": true,
+            "fields": {
+              "sub_heading": {
+                "type": "Text",
+                "config": {
+                  "label": "Sub Heading",
+                  "placeholder": ""
+                }
+              },
+              "heading": {
+                "type": "Text",
+                "config": {
+                  "label": "Heading",
+                  "placeholder": ""
+                }
+              },
+              "link_label": {
+                "type": "Text",
+                "config": {
+                  "label": "Link label",
+                  "placeholder": ""
+                }
+              },
+              "link": {
+                "type": "Link",
+                "config": {
+                  "label": "Link",
+                  "placeholder": "",
+                  "allowTargetBlank": true,
+                  "select": null,
+                  "allowText": true
+                }
+              }
+            }
+          }
+        },
+        "image": {
+          "type": "Image",
+          "config": {
+            "label": "Image",
+            "constraint": {},
+            "thumbnails": []
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

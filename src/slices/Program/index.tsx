@@ -1,10 +1,7 @@
-"use client";
-
 import { cn } from "@/libs/utils";
 import { Content } from "@prismicio/client";
-import { PrismicNextImage, PrismicNextLink } from "@prismicio/next";
+import { PrismicNextImage } from "@prismicio/next";
 import { PrismicRichText, SliceComponentProps } from "@prismicio/react";
-import { motion } from "framer-motion";
 
 /**
  * Props for `Program`.
@@ -15,36 +12,55 @@ export type ProgramProps = SliceComponentProps<Content.ProgramSlice>;
  * Component for "Program" Slices.
  */
 const Program = ({ slice }: ProgramProps): JSX.Element => {
-	return (
-		<section
-			data-slice-type={slice.slice_type}
-			data-slice-variation={slice.variation}
-			className={cn(
-				"min-h-screen flex flex-wrap justify-center items-center"
-			)}
-		>
-			{slice.primary.program_overview.map((program, index) => {
-				return (
-					<motion.div
-						key={index}
-						initial={{ opacity: 0 }}
-						animate={{ opacity: 1 }}
-						transition={{ duration: 0.5 }}
-						className={cn("flex flex-col items-center justify-center m-4 p-4 border rounded-lg w-1/3")}
-					>
-						<PrismicNextImage
-							field={program.program_image}
-							className={cn("w-full h-auto")}
-						/>
-						<h2 className={cn("text-2xl font-bold mt-4 text-center")}>
-							{program.program_title}
-						</h2>
-						<PrismicRichText field={program.program_description} />
-					</motion.div>
-				)
-			})}
-		</section>
-	);
+  return (
+    <section
+      className={cn("min-h-screen flex items-center justify-center")}
+      data-slice-type={slice.slice_type}
+      data-slice-variation={slice.variation}
+    >
+      <div className="w-1/2 h-full">
+        <PrismicNextImage alt="" field={slice.primary.image} />
+      </div>
+      <div>
+      <div>
+        <h1 className={cn("text-black text-1xl uppercase font-bold")}>
+          {slice.primary.sub_heading}
+        </h1>
+        <h1 className={cn("text-black text-2xl uppercase font-bold")}>
+          {slice.primary.heading}
+        </h1>
+        <PrismicRichText field={slice.primary.description} />
+      </div>
+      
+        <div>
+          {slice.primary.basketball_card.map((card, index) => (
+            <div className={cn("flex flex-row items-center justify-center h-1/2")} key={index}>
+              <PrismicNextImage className={cn("h-1/2 w-20")} alt="" field={card.basketball_card_image} />
+              <div className={cn("flex flex-col ")}>
+              <h3 className={cn("font-bold text-md")}>{card.basketball_card_heading}</h3>
+              <div className={cn("text-sm")}>
+              <PrismicRichText  field={card.basketball_card_description} />
+              </div>
+              </div>
+            </div>
+          ))}
+        </div>
+        <div>
+          {slice.primary.community_card.map((card, index) => (
+            <div className={cn("flex flex-row items-center justify-center")} key={index}>
+              <PrismicNextImage className={cn("h-1/2 w-20")} alt="" field={card.community_card_image} />
+              <div className={cn("flex flex-col")}>
+              <h3 className={cn("font-bold text-md")}>{card.community_card_heading}</h3>
+              <div className={cn("text-sm")}>
+              <PrismicRichText field={card.community_card_description} />
+              </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
 };
 
 export default Program;

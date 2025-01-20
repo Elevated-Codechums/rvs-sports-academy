@@ -25,7 +25,19 @@
         "fieldset": "Slice Zone",
         "config": {
           "choices": {
+            "gallery": {
+              "type": "SharedSlice"
+            },
+            "team": {
+              "type": "SharedSlice"
+            },
+            "free_trial": {
+              "type": "SharedSlice"
+            },
             "program": {
+              "type": "SharedSlice"
+            },
+            "welcome": {
               "type": "SharedSlice"
             },
             "hero": {
