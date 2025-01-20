@@ -38,7 +38,7 @@ const Gallery = ({ slice }: GalleryProps): JSX.Element => {
           </div>
           <div>
             {slice.primary.gallery_text.map((text, index) => (
-              <div className={cn("h-1/2 w-3/4")}>
+              <div className={cn("h-1/2 w-3/4")} key={index}>
                 <PrismicNextImage alt="" field={text.image} />
               </div>
             ))}
