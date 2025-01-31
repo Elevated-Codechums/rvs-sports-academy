@@ -1375,6 +1375,16 @@ export interface ProgramSliceDefaultPrimary {
   image: prismic.ImageField<never>;
 
   /**
+   * SmallImage field in *Program → Default → Primary*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: program.default.primary.smallimage
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  smallimage: prismic.ImageField<never>;
+
+  /**
    * Sub Heading field in *Program → Default → Primary*
    *
    * - **Field Type**: Text
