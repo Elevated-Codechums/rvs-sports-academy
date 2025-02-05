@@ -1,146 +1,51 @@
 import { cn } from "@/libs/utils";
-
 import { createClient } from "@/prismicio";
 import { PrismicNextImage, PrismicNextLink } from "@prismicio/next";
-import { Button, LinkButton } from "./Utils/Button";
-import Link from "next/link";
+import { Instagram, Mail, MapPin, Phone  } from "lucide-react";
+import { Button } from "./Utils/Button";
+import X from "@/assets/x-logo.svg";
 
 export default async function Footer() {
-	const client = createClient();
+  const client = createClient();
+  const settings = await client.getSingle("settings");
 
-	const settings = await client.getSingle("settings");
-
-	return (
-		<footer
-			className={cn(
-				"px-40 flex flex-col items-center justify-between w-full bg-background text-black py-10 gap-10 border-t-deepBlue border-2"
-			)}
-		>
-			<div className={cn("w-full flex items-center justify-between")}>
-				<div className={cn("flex flex-col items-start justify-center")}>
-					<PrismicNextLink
-						href="/"
-						className={cn(
-							"flex flex-col items-start justify-start gap-2"
-						)}
-					>
-						<PrismicNextImage
-							width={100}
-							height={100}
-							field={settings.data.site_logo}
-							alt={""}
-						/>
-						<span className="text-4xl font-bold font-montserrat">
-							{settings.data.site_title}
-						</span>
-						<span className={cn("font-outfit")}>
-							{settings.data.site_slogan}
-						</span>
-					</PrismicNextLink>
-				</div>
-				<div className="flex flex-col items-start justify-start gap-5">
-					<div className="flex flex-col items-start justify-start gap-2">
-						<h5
-							className={cn("text-2xl font-montserrat font-bold")}
-						>
-							Quick Links
-						</h5>
-						<div
-							className={cn(
-								"w-[50%] h-1 rounded-lg bg-gradient-to-r from-deepBlue to-basketballOrange"
-							)}
-						></div>
-					</div>
-					<ul
-						className={cn(
-							"grid grid-cols-2 gap-5 font-roboto font-[500]"
-						)}
-					>
-						{settings.data.navigations.map(
-							(nav, index) => (
-								<li key={index}>
-									<PrismicNextLink
-										className={cn("")}
-										field={nav.link}
-									>
-										<LinkButton
-											color="basketballOrangeDark"
-											size="small"
-										>
-											{nav.link_label}
-										</LinkButton>
-									</PrismicNextLink>
-								</li>
-							),
-							[]
-						)}
-					</ul>
-				</div>
-			</div>
-			<div
-				className={cn(
-					"w-full font-outfit flex flex-col items-start justify-start gap-5"
-				)}
-			>
-				<div
-					className={cn(
-						"w-full h-1 rounded-lg bg-gradient-to-r from-deepBlue to-basketballOrange"
-					)}
-				></div>
-				<div className="flex items-center justify-between w-full">
-					<div>
-						<p>
-							&copy; {new Date().getFullYear()}{" "}
-							{settings.data.site_title}
-						</p>
-						<p>Made with ❤️ by Elevated CodeChums</p>
-					</div>
-					<div className="flex flex-col items-start justify-between gap-5">
-						<div
-							className={cn(
-								"flex items-start justify-start flex-col gap-1"
-							)}
-						>
-							<h5
-								className={cn(
-									"text-xl font-montserrat font-bold text-basketballOrange"
-								)}
-							>
-								Contact Us
-							</h5>
-							<div
-								className={cn(
-									"w-[30%] h-1 rounded-lg bg-gradient-to-r from-deepBlue to-basketballOrange"
-								)}
-							></div>
-						</div>
-						<div
-							className={cn(
-								"flex items-center justify-normal gap-3"
-							)}
-						>
-							<PrismicNextLink
-								field={settings.data.contact_email}
-							>
-								<Button color="grassGreen" size="small">
-									{settings.data.contact_email_label}
-								</Button>
-							</PrismicNextLink>
-							<PrismicNextLink
-								field={settings.data.contact_number}
-							>
-								<Button
-									color="grassGreen"
-									size="small"
-									className={cn("")}
-								>
-									{settings.data.contact_number_label}
-								</Button>
-							</PrismicNextLink>
-						</div>
-					</div>
-				</div>
-			</div>
-		</footer>
-	);
+  return (
+    <footer className={cn("px-5 sm:px-10 md:px-20 lg:px-40 bg-black text-white py-10")}> 
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 text-center sm:text-left">
+        <div>
+          <h5 className="text-lg font-bold">ABOUT US</h5>
+          <p className="text-sm text-gray-400 mt-2">
+            We are the basketball club playing in Primary League. And have of word impact goddesses...
+          </p>
+        </div>
+        <div>
+          <h5 className="text-lg font-bold">CONTACT US</h5>
+          <p className="text-sm text-gray-400 mt-2">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit...
+          </p>
+          <p className="mt-2 flex items-center justify-center sm:justify-start"><MapPin className="mr-2" /> 121 Wallstreet Street, New York, USA</p>
+          <p className="mt-2 flex items-center justify-center sm:justify-start"><Phone  className="mr-2" /> +800-1234-56-78</p>
+          <p className="mt-2 flex items-center justify-center sm:justify-start"><Phone  className="mr-2" /> +908-288-23-33</p>
+          <p className="mt-2 flex items-center justify-center sm:justify-start"><Mail className="mr-2" /> rvssportsacademy@gmail.com</p>
+        </div>
+        <div>
+          <h5 className="text-lg font-bold">SIGN UP FOR UPDATES</h5>
+          <input type="email" placeholder="E-Mail" className="w-full mt-2 p-2 text-black rounded" />
+          <Button color="basketballOrangeDark" size="small" className="mt-3">SUBSCRIBE NOW</Button>
+          <div className="flex flex-col sm:flex-row items-center sm:items-start gap-3 mt-3">
+            <span>Follow us on:</span>
+            <div className="flex gap-2">
+              <a href="#" className="text-white"> <Instagram /></a>
+              <a href="#" className="text-red"> <Mail /></a>
+              <a href="#" className="text-white"> <MapPin /></a>
+              <a href="#" className="text-white"> <X /></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="border-t border-gray-700 mt-10 pt-5 text-center text-gray-400 text-sm">
+        2024 © Elevated Codechums. All Rights Reserved | Made with ❤️ by Elevated Codechums
+      </div>
+    </footer>
+  );
 }
