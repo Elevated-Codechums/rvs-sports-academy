@@ -117,6 +117,17 @@ interface PageDocumentData {
   description: prismic.KeyTextField;
 
   /**
+   * Background Image field in *page*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: page.background_image
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  background_image: prismic.ImageField<never>;
+
+  /**
    * Slice Zone field in *page*
    *
    * - **Field Type**: Slice Zone
@@ -357,38 +368,83 @@ export type AllDocumentTypes =
   | SettingsDocument;
 
 /**
- * Item in *About → Default → Primary → Banner*
+ * Item in *About → Default → Primary → About Cards*
  */
-export interface AboutSliceDefaultPrimaryBannerItem {
+export interface AboutSliceDefaultPrimaryAboutCardsItem {
   /**
-   * image field in *About → Default → Primary → Banner*
+   * Image field in *About → Default → Primary → About Cards*
    *
    * - **Field Type**: Image
    * - **Placeholder**: *None*
-   * - **API ID Path**: about.default.primary.banner[].image
+   * - **API ID Path**: about.default.primary.about_cards[].image
    * - **Documentation**: https://prismic.io/docs/field#image
    */
   image: prismic.ImageField<never>;
 
   /**
-   * heading field in *About → Default → Primary → Banner*
+   * Icon field in *About → Default → Primary → About Cards*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: about.default.primary.about_cards[].icon
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  icon: prismic.ImageField<never>;
+
+  /**
+   * Title field in *About → Default → Primary → About Cards*
    *
    * - **Field Type**: Text
    * - **Placeholder**: *None*
-   * - **API ID Path**: about.default.primary.banner[].heading
+   * - **API ID Path**: about.default.primary.about_cards[].title
    * - **Documentation**: https://prismic.io/docs/field#key-text
    */
-  heading: prismic.KeyTextField;
+  title: prismic.KeyTextField;
 
   /**
-   * Description field in *About → Default → Primary → Banner*
+   * Description field in *About → Default → Primary → About Cards*
    *
    * - **Field Type**: Rich Text
    * - **Placeholder**: *None*
-   * - **API ID Path**: about.default.primary.banner[].description
+   * - **API ID Path**: about.default.primary.about_cards[].description
    * - **Documentation**: https://prismic.io/docs/field#rich-text-title
    */
   description: prismic.RichTextField;
+}
+
+/**
+ * Item in *About → Default → Primary → Trainer*
+ */
+export interface AboutSliceDefaultPrimaryTrainerItem {
+  /**
+   * Trainer Image field in *About → Default → Primary → Trainer*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: about.default.primary.trainer[].trainer_image
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  trainer_image: prismic.ImageField<never>;
+
+  /**
+   * Trainer Name field in *About → Default → Primary → Trainer*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: about.default.primary.trainer[].trainer_name
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  trainer_name: prismic.KeyTextField;
+
+  /**
+   * Trainer Title field in *About → Default → Primary → Trainer*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: about.default.primary.trainer[].trainer_title
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  trainer_title: prismic.KeyTextField;
 }
 
 /**
@@ -396,14 +452,116 @@ export interface AboutSliceDefaultPrimaryBannerItem {
  */
 export interface AboutSliceDefaultPrimary {
   /**
-   * Banner field in *About → Default → Primary*
+   * About Cards field in *About → Default → Primary*
    *
    * - **Field Type**: Group
    * - **Placeholder**: *None*
-   * - **API ID Path**: about.default.primary.banner[]
+   * - **API ID Path**: about.default.primary.about_cards[]
    * - **Documentation**: https://prismic.io/docs/field#group
    */
-  banner: prismic.GroupField<Simplify<AboutSliceDefaultPrimaryBannerItem>>;
+  about_cards: prismic.GroupField<
+    Simplify<AboutSliceDefaultPrimaryAboutCardsItem>
+  >;
+
+  /**
+   * Background Image field in *About → Default → Primary*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: about.default.primary.background_image
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  background_image: prismic.ImageField<never>;
+
+  /**
+   * Sub Heading field in *About → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: about.default.primary.sub_heading
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  sub_heading: prismic.KeyTextField;
+
+  /**
+   * Heading field in *About → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: about.default.primary.heading
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  heading: prismic.KeyTextField;
+
+  /**
+   * Description field in *About → Default → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: about.default.primary.description
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  description: prismic.RichTextField;
+
+  /**
+   * Button Text field in *About → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: about.default.primary.button_text
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  button_text: prismic.KeyTextField;
+
+  /**
+   * Button Link field in *About → Default → Primary*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: about.default.primary.button_link
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  button_link: prismic.LinkField;
+
+  /**
+   * Trainer Title field in *About → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: about.default.primary.trainer_title
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  trainer_title: prismic.KeyTextField;
+
+  /**
+   * Trainer field in *About → Default → Primary*
+   *
+   * - **Field Type**: Group
+   * - **Placeholder**: *None*
+   * - **API ID Path**: about.default.primary.trainer[]
+   * - **Documentation**: https://prismic.io/docs/field#group
+   */
+  trainer: prismic.GroupField<Simplify<AboutSliceDefaultPrimaryTrainerItem>>;
+
+  /**
+   * Newsletter Title field in *About → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: about.default.primary.newsletter_title
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  newsletter_title: prismic.KeyTextField;
+
+  /**
+   * Newsletter Image field in *About → Default → Primary*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: about.default.primary.newsletter_image
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  newsletter_image: prismic.ImageField<never>;
 }
 
 /**
@@ -1673,7 +1831,8 @@ declare module "@prismicio/client" {
       SettingsDocumentDataNavigationsItem,
       AllDocumentTypes,
       AboutSlice,
-      AboutSliceDefaultPrimaryBannerItem,
+      AboutSliceDefaultPrimaryAboutCardsItem,
+      AboutSliceDefaultPrimaryTrainerItem,
       AboutSliceDefaultPrimary,
       AboutSliceVariation,
       AboutSliceDefault,
