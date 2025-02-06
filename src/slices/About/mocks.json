@@ -3,35 +3,55 @@
 		"__TYPE__": "SharedSliceContent",
 		"variation": "default",
 		"primary": {
-			"topics": {
+			"banner": {
 				"__TYPE__": "GroupContentType",
 				"value": [
 					{
 						"__TYPE__": "GroupItemContent",
 						"value": [
 							[
-								"topic_description",
+								"image",
+								{
+									"origin": {
+										"id": "main",
+										"url": "https://images.unsplash.com/photo-1587840171670-8b850147754e",
+										"width": 4480,
+										"height": 4480
+									},
+									"url": "https://images.unsplash.com/photo-1587840171670-8b850147754e",
+									"width": 4480,
+									"height": 4480,
+									"edit": {
+										"zoom": 1,
+										"crop": {
+											"x": 0,
+											"y": 0
+										},
+										"background": "transparent"
+									},
+									"credits": null,
+									"alt": null,
+									"__TYPE__": "ImageContent",
+									"thumbnails": {}
+								}
+							],
+							[
+								"heading",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "wall",
+									"type": "Text"
+								}
+							],
+							[
+								"description",
 								{
 									"__TYPE__": "StructuredTextContent",
 									"value": [
 										{
 											"type": "paragraph",
 											"content": {
-												"text": "Ad Lorem dolor cillum do deserunt et duis. Irure cupidatat tempor adipisicing adipisicing consectetur aliqua ad duis do aliquip reprehenderit. Fugiat incididunt duis nulla excepteur ex velit."
-											}
-										}
-									]
-								}
-							],
-							[
-								"topic_title",
-								{
-									"__TYPE__": "StructuredTextContent",
-									"value": [
-										{
-											"type": "heading3",
-											"content": {
-												"text": "Orbit"
+												"text": "Est nisi culpa tempor nostrud nulla fugiat commodo nulla ut elit. Aute cillum qui ipsum. Anim eiusmod nisi eu enim eu irure esse ullamco aliqua culpa sit."
 											}
 										}
 									]

@@ -12,25 +12,31 @@
       "description": "Default",
       "imageUrl": "",
       "primary": {
-        "topics": {
+        "banner": {
           "type": "Group",
           "config": {
-            "label": "Topics",
+            "label": "Banner",
             "repeat": true,
             "fields": {
-              "topic_title": {
-                "type": "StructuredText",
+              "image": {
+                "type": "Image",
                 "config": {
-                  "label": "Topic Title",
-                  "placeholder": "",
-                  "allowTargetBlank": false,
-                  "single": "strong,em,heading3"
+                  "label": "image",
+                  "constraint": {},
+                  "thumbnails": []
                 }
               },
-              "topic_description": {
+              "heading": {
+                "type": "Text",
+                "config": {
+                  "label": "heading",
+                  "placeholder": ""
+                }
+              },
+              "description": {
                 "type": "StructuredText",
                 "config": {
-                  "label": "Topic Description",
+                  "label": "Description",
                   "placeholder": "",
                   "allowTargetBlank": true,
                   "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"

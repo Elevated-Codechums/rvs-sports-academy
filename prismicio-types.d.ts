@@ -357,28 +357,38 @@ export type AllDocumentTypes =
   | SettingsDocument;
 
 /**
- * Item in *About → Default → Primary → Topics*
+ * Item in *About → Default → Primary → Banner*
  */
-export interface AboutSliceDefaultPrimaryTopicsItem {
+export interface AboutSliceDefaultPrimaryBannerItem {
   /**
-   * Topic Title field in *About → Default → Primary → Topics*
+   * image field in *About → Default → Primary → Banner*
    *
-   * - **Field Type**: Rich Text
+   * - **Field Type**: Image
    * - **Placeholder**: *None*
-   * - **API ID Path**: about.default.primary.topics[].topic_title
-   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   * - **API ID Path**: about.default.primary.banner[].image
+   * - **Documentation**: https://prismic.io/docs/field#image
    */
-  topic_title: prismic.RichTextField;
+  image: prismic.ImageField<never>;
 
   /**
-   * Topic Description field in *About → Default → Primary → Topics*
+   * heading field in *About → Default → Primary → Banner*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: about.default.primary.banner[].heading
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  heading: prismic.KeyTextField;
+
+  /**
+   * Description field in *About → Default → Primary → Banner*
    *
    * - **Field Type**: Rich Text
    * - **Placeholder**: *None*
-   * - **API ID Path**: about.default.primary.topics[].topic_description
+   * - **API ID Path**: about.default.primary.banner[].description
    * - **Documentation**: https://prismic.io/docs/field#rich-text-title
    */
-  topic_description: prismic.RichTextField;
+  description: prismic.RichTextField;
 }
 
 /**
@@ -386,14 +396,14 @@ export interface AboutSliceDefaultPrimaryTopicsItem {
  */
 export interface AboutSliceDefaultPrimary {
   /**
-   * Topics field in *About → Default → Primary*
+   * Banner field in *About → Default → Primary*
    *
    * - **Field Type**: Group
    * - **Placeholder**: *None*
-   * - **API ID Path**: about.default.primary.topics[]
+   * - **API ID Path**: about.default.primary.banner[]
    * - **Documentation**: https://prismic.io/docs/field#group
    */
-  topics: prismic.GroupField<Simplify<AboutSliceDefaultPrimaryTopicsItem>>;
+  banner: prismic.GroupField<Simplify<AboutSliceDefaultPrimaryBannerItem>>;
 }
 
 /**
@@ -1663,7 +1673,7 @@ declare module "@prismicio/client" {
       SettingsDocumentDataNavigationsItem,
       AllDocumentTypes,
       AboutSlice,
-      AboutSliceDefaultPrimaryTopicsItem,
+      AboutSliceDefaultPrimaryBannerItem,
       AboutSliceDefaultPrimary,
       AboutSliceVariation,
       AboutSliceDefault,
