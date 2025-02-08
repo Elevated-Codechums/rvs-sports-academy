@@ -1810,6 +1810,86 @@ type TeamSliceVariation = TeamSliceDefault;
 export type TeamSlice = prismic.SharedSlice<"team", TeamSliceVariation>;
 
 /**
+ * Item in *Training → Default → Primary → Plans*
+ */
+export interface TrainingSliceDefaultPrimaryPlansItem {
+  /**
+   * Image field in *Training → Default → Primary → Plans*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: training.default.primary.plans[].image
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  image: prismic.ImageField<never>;
+
+  /**
+   * Title field in *Training → Default → Primary → Plans*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: training.default.primary.plans[].title
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  title: prismic.KeyTextField;
+
+  /**
+   * Price field in *Training → Default → Primary → Plans*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: training.default.primary.plans[].price
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  price: prismic.KeyTextField;
+
+  /**
+   * Description field in *Training → Default → Primary → Plans*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: training.default.primary.plans[].description
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  description: prismic.RichTextField;
+}
+
+/**
+ * Primary content in *Training → Default → Primary*
+ */
+export interface TrainingSliceDefaultPrimary {
+  /**
+   * Heading field in *Training → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: training.default.primary.heading
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  heading: prismic.KeyTextField;
+
+  /**
+   * Description field in *Training → Default → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: training.default.primary.description
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  description: prismic.RichTextField;
+
+  /**
+   * Plans field in *Training → Default → Primary*
+   *
+   * - **Field Type**: Group
+   * - **Placeholder**: *None*
+   * - **API ID Path**: training.default.primary.plans[]
+   * - **Documentation**: https://prismic.io/docs/field#group
+   */
+  plans: prismic.GroupField<Simplify<TrainingSliceDefaultPrimaryPlansItem>>;
+}
+
+/**
  * Default variation for Training Slice
  *
  * - **API ID**: `default`
@@ -1818,7 +1898,7 @@ export type TeamSlice = prismic.SharedSlice<"team", TeamSliceVariation>;
  */
 export type TrainingSliceDefault = prismic.SharedSliceVariation<
   "default",
-  Record<string, never>,
+  Simplify<TrainingSliceDefaultPrimary>,
   never
 >;
 
@@ -2010,6 +2090,8 @@ declare module "@prismicio/client" {
       TeamSliceVariation,
       TeamSliceDefault,
       TrainingSlice,
+      TrainingSliceDefaultPrimaryPlansItem,
+      TrainingSliceDefaultPrimary,
       TrainingSliceVariation,
       TrainingSliceDefault,
       WelcomeSlice,

@@ -1,6 +1,6 @@
 import { cn } from "@/libs/utils";
 import { Content } from "@prismicio/client";
-import { oswald } from "@/libs/fonts";
+
 import { PrismicNextImage } from "@prismicio/next";
 import { PrismicRichText, SliceComponentProps } from "@prismicio/react";
 
@@ -15,7 +15,9 @@ export type PlayersProps = SliceComponentProps<Content.PlayersSlice>;
 const Players = ({ slice }: PlayersProps): JSX.Element => {
   return (
     <section
-      className={cn("min-h-screen flex flex-col items-center  p-10 justify-center px-4 sm:px-8")}
+      className={cn(
+        "min-h-screen flex flex-col items-center  p-10 justify-center px-4 sm:px-8"
+      )}
       data-slice-type={slice.slice_type}
       data-slice-variation={slice.variation}
     >
@@ -32,11 +34,23 @@ const Players = ({ slice }: PlayersProps): JSX.Element => {
       {/* Players Grid - Responsive Layout */}
       <div className="grid gap-6 sm:gap-9 items-center bg-gray-100 p-6 sm:p-11 justify-center grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 w-full">
         {slice.primary.players.map((player, index) => (
-          <div key={index} className="flex flex-col items-center justify-center text-center gap-4">
-            <PrismicNextImage width={250} height={400} alt="" field={player.image} />
-            <h2 className="text-lg font-oswald tracking-tighter font-semibold">{player.name}</h2>
+            <div
+            key={index}
+            className="flex flex-col items-center justify-center text-center gap-4"
+            >
+            <div className="relative rounded-full w-full aspect-[4/5] md:aspect-[5/8]">
+              <PrismicNextImage
+              alt=""
+              field={player.image}
+              fill
+              className="object-cover"
+              />
+            </div>
+            <h2 className="font-oswald text-xl leading-none tracking-tighter font-semibold">
+              {player.name}
+            </h2>
             <PrismicRichText field={player.player_description} />
-          </div>
+            </div>
         ))}
       </div>
     </section>

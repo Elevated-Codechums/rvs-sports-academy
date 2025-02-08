@@ -1,6 +1,6 @@
 import { Content } from "@prismicio/client";
 import { SliceComponentProps } from "@prismicio/react";
-
+import Hero from "@/Components/Training/hero";
 /**
  * Props for `Training`.
  */
@@ -15,7 +15,7 @@ const Training = ({ slice }: TrainingProps): JSX.Element => {
       data-slice-type={slice.slice_type}
       data-slice-variation={slice.variation}
     >
-      Placeholder component for training (variation: {slice.variation}) Slices
+      <Hero slice={slice} index={0} slices={[]} context={null}/>
     </section>
   );
 };
