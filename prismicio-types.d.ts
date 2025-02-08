@@ -88,7 +88,11 @@ export type HomepageDocument<Lang extends string = string> =
     Lang
   >;
 
-type PageDocumentDataSlicesSlice = PlayersSlice | ContactSlice | AboutSlice;
+type PageDocumentDataSlicesSlice =
+  | GalleryPageSlice
+  | PlayersSlice
+  | ContactSlice
+  | AboutSlice;
 
 /**
  * Content for page documents
@@ -552,6 +556,16 @@ export interface AboutSliceDefaultPrimary {
    * - **Documentation**: https://prismic.io/docs/field#key-text
    */
   newsletter_title: prismic.KeyTextField;
+
+  /**
+   * NewsletterDiscription field in *About → Default → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: about.default.primary.newsletterdiscription
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  newsletterdiscription: prismic.RichTextField;
 
   /**
    * Newsletter Image field in *About → Default → Primary*
@@ -1277,6 +1291,78 @@ export type GallerySlice = prismic.SharedSlice<
 >;
 
 /**
+ * Item in *GalleryPage → Default → Primary → Images*
+ */
+export interface GalleryPageSliceDefaultPrimaryImagesItem {
+  /**
+   * Image field in *GalleryPage → Default → Primary → Images*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: gallery_page.default.primary.images[].image
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  image: prismic.ImageField<never>;
+
+  /**
+   * Description field in *GalleryPage → Default → Primary → Images*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: gallery_page.default.primary.images[].description
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  description: prismic.RichTextField;
+}
+
+/**
+ * Primary content in *GalleryPage → Default → Primary*
+ */
+export interface GalleryPageSliceDefaultPrimary {
+  /**
+   * Images field in *GalleryPage → Default → Primary*
+   *
+   * - **Field Type**: Group
+   * - **Placeholder**: *None*
+   * - **API ID Path**: gallery_page.default.primary.images[]
+   * - **Documentation**: https://prismic.io/docs/field#group
+   */
+  images: prismic.GroupField<
+    Simplify<GalleryPageSliceDefaultPrimaryImagesItem>
+  >;
+}
+
+/**
+ * Default variation for GalleryPage Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type GalleryPageSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<GalleryPageSliceDefaultPrimary>,
+  never
+>;
+
+/**
+ * Slice variation for *GalleryPage*
+ */
+type GalleryPageSliceVariation = GalleryPageSliceDefault;
+
+/**
+ * GalleryPage Shared Slice
+ *
+ * - **API ID**: `gallery_page`
+ * - **Description**: GalleryPage
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type GalleryPageSlice = prismic.SharedSlice<
+  "gallery_page",
+  GalleryPageSliceVariation
+>;
+
+/**
  * Primary content in *Hero → Default → Primary*
  */
 export interface HeroSliceDefaultPrimary {
@@ -1869,6 +1955,11 @@ declare module "@prismicio/client" {
       GallerySliceDefaultPrimary,
       GallerySliceVariation,
       GallerySliceDefault,
+      GalleryPageSlice,
+      GalleryPageSliceDefaultPrimaryImagesItem,
+      GalleryPageSliceDefaultPrimary,
+      GalleryPageSliceVariation,
+      GalleryPageSliceDefault,
       HeroSlice,
       HeroSliceDefaultPrimary,
       HeroSliceVariation,

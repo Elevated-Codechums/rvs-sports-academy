@@ -10,6 +10,7 @@ export const components = {
   faq: dynamic(() => import("./Faq")),
   free_trial: dynamic(() => import("./FreeTrial")),
   gallery: dynamic(() => import("./Gallery")),
+  gallery_page: dynamic(() => import("./GalleryPage")),
   hero: dynamic(() => import("./Hero")),
   players: dynamic(() => import("./Players")),
   program: dynamic(() => import("./Program")),
