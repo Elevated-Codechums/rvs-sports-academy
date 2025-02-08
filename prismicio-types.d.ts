@@ -1291,28 +1291,18 @@ export type GallerySlice = prismic.SharedSlice<
 >;
 
 /**
- * Item in *GalleryPage → Default → Primary → Images*
+ * Item in *GalleryPage → Default → Primary → Image*
  */
-export interface GalleryPageSliceDefaultPrimaryImagesItem {
+export interface GalleryPageSliceDefaultPrimaryImageItem {
   /**
-   * Image field in *GalleryPage → Default → Primary → Images*
+   * Image field in *GalleryPage → Default → Primary → Image*
    *
    * - **Field Type**: Image
    * - **Placeholder**: *None*
-   * - **API ID Path**: gallery_page.default.primary.images[].image
+   * - **API ID Path**: gallery_page.default.primary.image[].image
    * - **Documentation**: https://prismic.io/docs/field#image
    */
   image: prismic.ImageField<never>;
-
-  /**
-   * Description field in *GalleryPage → Default → Primary → Images*
-   *
-   * - **Field Type**: Rich Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: gallery_page.default.primary.images[].description
-   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
-   */
-  description: prismic.RichTextField;
 }
 
 /**
@@ -1320,16 +1310,24 @@ export interface GalleryPageSliceDefaultPrimaryImagesItem {
  */
 export interface GalleryPageSliceDefaultPrimary {
   /**
-   * Images field in *GalleryPage → Default → Primary*
+   * Heading field in *GalleryPage → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: gallery_page.default.primary.heading
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  heading: prismic.KeyTextField;
+
+  /**
+   * Image field in *GalleryPage → Default → Primary*
    *
    * - **Field Type**: Group
    * - **Placeholder**: *None*
-   * - **API ID Path**: gallery_page.default.primary.images[]
+   * - **API ID Path**: gallery_page.default.primary.image[]
    * - **Documentation**: https://prismic.io/docs/field#group
    */
-  images: prismic.GroupField<
-    Simplify<GalleryPageSliceDefaultPrimaryImagesItem>
-  >;
+  image: prismic.GroupField<Simplify<GalleryPageSliceDefaultPrimaryImageItem>>;
 }
 
 /**
@@ -1956,7 +1954,7 @@ declare module "@prismicio/client" {
       GallerySliceVariation,
       GallerySliceDefault,
       GalleryPageSlice,
-      GalleryPageSliceDefaultPrimaryImagesItem,
+      GalleryPageSliceDefaultPrimaryImageItem,
       GalleryPageSliceDefaultPrimary,
       GalleryPageSliceVariation,
       GalleryPageSliceDefault,
