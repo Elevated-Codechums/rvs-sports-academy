@@ -1,5 +1,6 @@
 import { Content } from "@prismicio/client";
 import { SliceComponentProps } from "@prismicio/react";
+import Gallery from "@/Components/Gallery";
 
 /**
  * Props for `GalleryPage`.
@@ -15,8 +16,7 @@ const GalleryPage = ({ slice }: GalleryPageProps): JSX.Element => {
       data-slice-type={slice.slice_type}
       data-slice-variation={slice.variation}
     >
-      Placeholder component for gallery_page (variation: {slice.variation})
-      Slices
+      <Gallery slice={slice} index={0} slices={[]} context={null} />
     </section>
   );
 };
