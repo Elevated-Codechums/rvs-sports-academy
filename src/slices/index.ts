@@ -15,5 +15,6 @@ export const components = {
   players: dynamic(() => import("./Players")),
   program: dynamic(() => import("./Program")),
   team: dynamic(() => import("./Team")),
+  training: dynamic(() => import("./Training")),
   welcome: dynamic(() => import("./Welcome")),
 };

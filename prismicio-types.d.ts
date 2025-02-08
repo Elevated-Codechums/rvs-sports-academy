@@ -89,6 +89,7 @@ export type HomepageDocument<Lang extends string = string> =
   >;
 
 type PageDocumentDataSlicesSlice =
+  | TrainingSlice
   | GalleryPageSlice
   | PlayersSlice
   | ContactSlice
@@ -1809,6 +1810,36 @@ type TeamSliceVariation = TeamSliceDefault;
 export type TeamSlice = prismic.SharedSlice<"team", TeamSliceVariation>;
 
 /**
+ * Default variation for Training Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type TrainingSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Record<string, never>,
+  never
+>;
+
+/**
+ * Slice variation for *Training*
+ */
+type TrainingSliceVariation = TrainingSliceDefault;
+
+/**
+ * Training Shared Slice
+ *
+ * - **API ID**: `training`
+ * - **Description**: Training
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type TrainingSlice = prismic.SharedSlice<
+  "training",
+  TrainingSliceVariation
+>;
+
+/**
  * Primary content in *Welcome → Default → Primary*
  */
 export interface WelcomeSliceDefaultPrimary {
@@ -1978,6 +2009,9 @@ declare module "@prismicio/client" {
       TeamSliceDefaultPrimary,
       TeamSliceVariation,
       TeamSliceDefault,
+      TrainingSlice,
+      TrainingSliceVariation,
+      TrainingSliceDefault,
       WelcomeSlice,
       WelcomeSliceDefaultPrimary,
       WelcomeSliceVariation,
