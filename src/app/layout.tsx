@@ -1,7 +1,7 @@
 import { PrismicPreview } from "@prismicio/next";
 import { repositoryName } from "@/prismicio";
 import { createClient } from "@/prismicio";
-import { outfit, roboto, montserrat, oswald } from "@/libs/fonts";
+import { outfit, roboto, montserrat, oswald, roboto_condensed } from "@/libs/fonts";
 import { cn } from "@/libs/utils";
 import Header from "@/Components/Header";
 import Footer from "@/Components/Footer";
@@ -35,7 +35,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={cn(outfit, roboto, montserrat, oswald, "antialiased")}>
+      <body className={cn(outfit, roboto, montserrat, oswald,roboto_condensed, "antialiased")}>
         <Header />
         {children}
         <Footer />

@@ -207,7 +207,6 @@
 				"type": "Text"
 			},
 			"newsletter_image": {
-				"__TYPE__": "ImageContent",
 				"origin": {
 					"id": "main",
 					"url": "https://images.unsplash.com/photo-1587653915936-5623ea0b949a",
@@ -225,7 +224,21 @@
 					},
 					"background": "transparent"
 				},
+				"credits": null,
+				"alt": null,
+				"__TYPE__": "ImageContent",
 				"thumbnails": {}
+			},
+			"newsletterdiscription": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Duis enim commodo esse cupidatat magna sint."
+						}
+					}
+				]
 			}
 		},
 		"items": []

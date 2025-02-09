@@ -12,102 +12,69 @@
       "description": "Default",
       "imageUrl": "",
       "primary": {
-        "details": {
+        "location": {
+          "type": "GeoPoint",
+          "config": {
+            "label": "Location"
+          }
+        },
+        "contact": {
           "type": "Group",
           "config": {
-            "label": "Details",
+            "label": "Contact",
             "repeat": true,
             "fields": {
-              "title": {
-                "type": "StructuredText",
+              "phone": {
+                "type": "Number",
                 "config": {
-                  "label": "Title",
-                  "placeholder": "",
-                  "allowTargetBlank": true,
-                  "multi": "heading3,strong,em"
+                  "label": "Phone",
+                  "placeholder": ""
                 }
               },
-              "detail_link": {
-                "type": "Link",
+              "calls": {
+                "type": "Number",
                 "config": {
-                  "label": "Detail Link",
-                  "placeholder": "",
-                  "allowTargetBlank": true,
-                  "select": null,
-                  "allowText": true
+                  "label": "Calls",
+                  "placeholder": ""
                 }
               },
-              "detail_icon": {
-                "type": "Image",
+              "email": {
+                "type": "Text",
                 "config": {
-                  "label": "Detail Icon",
-                  "constraint": {},
-                  "thumbnails": []
+                  "label": "Email",
+                  "placeholder": ""
                 }
               }
             }
           }
         },
-        "offices": {
+        "address": {
           "type": "Group",
           "config": {
-            "label": "Offices",
+            "label": "Address",
             "repeat": true,
             "fields": {
-              "name": {
-                "type": "Text",
-                "config": {
-                  "label": "Name",
-                  "placeholder": ""
-                }
-              },
-              "address": {
+              "officeaddress": {
                 "type": "StructuredText",
                 "config": {
-                  "label": "Address",
+                  "label": "OfficeAddress",
                   "placeholder": "",
                   "allowTargetBlank": true,
                   "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
                 }
               },
-              "location_coordinates": {
-                "type": "GeoPoint",
+              "pincode": {
+                "type": "Number",
                 "config": {
-                  "label": "Location Coordinates"
-                }
-              }
-            }
-          }
-        },
-        "socials": {
-          "type": "Group",
-          "config": {
-            "label": "Socials",
-            "repeat": true,
-            "fields": {
-              "social_name": {
-                "type": "Text",
-                "config": {
-                  "label": "Social Name",
+                  "label": "Pincode",
                   "placeholder": ""
                 }
               },
-              "social_link": {
-                "type": "Link",
+              "timings": {
+                "type": "Text",
                 "config": {
-                  "label": "Social Link",
-                  "placeholder": "",
-                  "allowTargetBlank": true,
-                  "select": null,
-                  "allowText": true
-                }
-              },
-              "social_image": {
-                "type": "Image",
-                "config": {
-                  "label": "Social Image",
-                  "constraint": {},
-                  "thumbnails": []
+                  "label": "Timings",
+                  "placeholder": ""
                 }
               }
             }
