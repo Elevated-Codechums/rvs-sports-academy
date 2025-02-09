@@ -28,7 +28,7 @@ const Navbar = () => {
 
       {/* Contact Us Button */}
       <div className="hidden lg:block">
-        <Link href="/contact" className="px-4 py-2 bg-orange-600 text-white rounded-md hover:bg-orange-700">Contact Us</Link>
+        <Link href="/contact" className="px-4 py-2 bg-orange-600 text-white font-oswald uppercase rounded-md hover:bg-orange-700">Contact Us</Link>
       </div>
 
       {/* Mobile Menu Toggle */}

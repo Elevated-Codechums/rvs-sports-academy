@@ -1,6 +1,6 @@
 import { cn } from "@/libs/utils";
 import { Content } from "@prismicio/client";
-
+import { oswald } from "@/libs/fonts";
 import { PrismicNextImage } from "@prismicio/next";
 import { PrismicRichText, SliceComponentProps } from "@prismicio/react";
 
@@ -22,7 +22,7 @@ const Players = ({ slice }: PlayersProps): JSX.Element => {
       data-slice-variation={slice.variation}
     >
       {/* Responsive Heading */}
-      <h1 className="text-4xl sm:text-5xl md:text-6xl uppercase pt-20 font-bold text-center">
+      <h1 className="text-4xl sm:text-5xl md:text-6xl font-oswald uppercase pt-2 font-bold text-center">
         {slice.primary.heading}
       </h1>
 
@@ -43,10 +43,10 @@ const Players = ({ slice }: PlayersProps): JSX.Element => {
               alt=""
               field={player.image}
               fill
-              className="object-cover"
+              className="object-cover pt-3"
               />
             </div>
-            <h2 className="font-oswald text-xl leading-none tracking-tighter font-semibold">
+            <h2 className="font-oswald text-xl uppercase leading-none tracking-tighter font-semibold">
               {player.name}
             </h2>
             <PrismicRichText field={player.player_description} />

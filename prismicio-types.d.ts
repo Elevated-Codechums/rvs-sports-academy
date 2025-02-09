@@ -577,6 +577,16 @@ export interface AboutSliceDefaultPrimary {
    * - **Documentation**: https://prismic.io/docs/field#image
    */
   newsletter_image: prismic.ImageField<never>;
+
+  /**
+   * Newsletter Heading field in *About → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: about.default.primary.newsletter_heading
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  newsletter_heading: prismic.KeyTextField;
 }
 
 /**
@@ -1284,6 +1294,16 @@ export interface GalleryPageSliceDefaultPrimary {
    * - **Documentation**: https://prismic.io/docs/field#key-text
    */
   heading: prismic.KeyTextField;
+
+  /**
+   * Description field in *GalleryPage → Default → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: gallery_page.default.primary.description
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  description: prismic.RichTextField;
 
   /**
    * Image field in *GalleryPage → Default → Primary*
