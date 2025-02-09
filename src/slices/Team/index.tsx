@@ -19,11 +19,11 @@ const Team = ({ slice }: TeamProps): JSX.Element => {
       data-slice-variation={slice.variation}
     >
       <div className="text-center mb-8">
-        <h1 className="text-sky-700 uppercase text-6xl pb-5 font-semibold">
+        <h1 className="text-gray-600 pt-12 font-oswald uppercase text-8xl pb-5 font-semibold">
           {slice.primary.heading}
         </h1>
       </div>
-      <div className="flex flex-wrap gap-x-24 gap-y-16 justify-center">
+      <div className="flex flex-wrap gap-x-24 gap-y-12 justify-center">
         {slice.primary.coaches.map((coach, index) => (
           <div
             key={index}
@@ -41,10 +41,10 @@ const Team = ({ slice }: TeamProps): JSX.Element => {
                 alt=""
               />
             </div>
-            <h2 className="mt-4 text-2xl text-deepBlue font-semibold">
+            <h2 className="mt-4 text-2xl text-deepBlue font-roboto font-bold uppercase">
               {coach.name}
             </h2>
-            <div className="text-xl mt-2 font-semibold text-orange-500">
+            <div className="text-xl mt-2 uppercase font-semibold text-orange-500">
               <PrismicRichText field={coach.designation} />
             </div>
           </div>
