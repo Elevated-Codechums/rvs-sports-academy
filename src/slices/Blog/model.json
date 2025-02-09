@@ -1,8 +1,8 @@
 {
-  "id": "team",
+  "id": "blog",
   "type": "SharedSlice",
-  "name": "Team",
-  "description": "Team",
+  "name": "Blog",
+  "description": "Blog",
   "variations": [
     {
       "id": "default",
@@ -19,10 +19,10 @@
             "placeholder": ""
           }
         },
-        "coaches": {
+        "blog": {
           "type": "Group",
           "config": {
-            "label": "Coaches",
+            "label": "Blog",
             "repeat": true,
             "fields": {
               "image": {
@@ -33,17 +33,20 @@
                   "thumbnails": []
                 }
               },
-              "name": {
-                "type": "Text",
+              "heading": {
+                "type": "Link",
                 "config": {
-                  "label": "Name",
-                  "placeholder": ""
+                  "label": "Heading",
+                  "placeholder": "",
+                  "allowTargetBlank": true,
+                  "select": null,
+                  "allowText": true
                 }
               },
-              "designation": {
+              "description": {
                 "type": "StructuredText",
                 "config": {
-                  "label": "Designation",
+                  "label": "Description",
                   "placeholder": "",
                   "allowTargetBlank": true,
                   "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"

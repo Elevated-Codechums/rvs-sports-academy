@@ -13,6 +13,7 @@ module.exports = {
 			fontFamily: {
 				outfit: ["var(--font-outfit)"],
 				roboto: ["var(--font-roboto)"],
+				'roboto-condensed': ["var(--font-roboto-condensed)"],
 				montserrat: ["var(--font-montserrat)"],
 				oswald: ["var(--font-oswald)"],
 			},

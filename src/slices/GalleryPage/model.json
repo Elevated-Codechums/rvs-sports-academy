@@ -1,8 +1,8 @@
 {
-  "id": "team",
+  "id": "gallery_page",
   "type": "SharedSlice",
-  "name": "Team",
-  "description": "Team",
+  "name": "GalleryPage",
+  "description": "GalleryPage",
   "variations": [
     {
       "id": "default",
@@ -19,10 +19,10 @@
             "placeholder": ""
           }
         },
-        "coaches": {
+        "image": {
           "type": "Group",
           "config": {
-            "label": "Coaches",
+            "label": "Image",
             "repeat": true,
             "fields": {
               "image": {
@@ -31,22 +31,6 @@
                   "label": "Image",
                   "constraint": {},
                   "thumbnails": []
-                }
-              },
-              "name": {
-                "type": "Text",
-                "config": {
-                  "label": "Name",
-                  "placeholder": ""
-                }
-              },
-              "designation": {
-                "type": "StructuredText",
-                "config": {
-                  "label": "Designation",
-                  "placeholder": "",
-                  "allowTargetBlank": true,
-                  "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
                 }
               }
             }

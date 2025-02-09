@@ -15,7 +15,8 @@ const FreeTrial = ({ slice }: FreeTrialProps): JSX.Element => {
 	return (
 		<section
 			className={cn(
-				"h-full w-full flex items-start p-10 justify-between"
+				"h-full w-full flex items-start p-10 justify-between",
+				"max-sm:p-5 max-sm:flex-col"
 			)}
 			data-slice-type={slice.slice_type}
 			data-slice-variation={slice.variation}
@@ -24,21 +25,23 @@ const FreeTrial = ({ slice }: FreeTrialProps): JSX.Element => {
 				<div
 					key={index}
 					className={cn(
-						"flex flex-col items-center justify-between gap-36  w-full h-full p-10 rounded"
+						"flex flex-col items-center justify-between gap-36 w-full h-full p-10 rounded",
+						"max-sm:p-5 max-sm:gap-8"
 					)}
 				>
 					<div
 						className={cn(
-							"flex flex-row items-start justify-between gap-72 w-full h-full p-10 rounded"
+							"flex flex-row items-start justify-between gap-72 w-full h-full p-10 rounded",
+							"max-sm:flex-col max-sm:gap-4 max-sm:p-5"
 						)}
 					>
 						<div>
 							<h1>{title.sub_heading}</h1>
 							<h1
 								className={cn(
-									"text-5xl font-bold  font-montserrat text-black "
+									"text-5xl font-bold font-montserrat text-black"
 								)}
-							>
+							>	
 								{title.heading}
 							</h1>
 						</div>
@@ -46,16 +49,16 @@ const FreeTrial = ({ slice }: FreeTrialProps): JSX.Element => {
 						<PrismicNextLink field={title.link}>
 							<button
 								className={cn(
-									"text-white text-[30px]  rounded-lg w-60 h-16 bg-basketballOrange "
+									"text-white text-xl font-bold uppercase font-oswald rounded-lg w-40 h-12 bg-basketballOrange"
 								)}
 							>
 								{title.link_label}
 							</button>
 						</PrismicNextLink>
 					</div>
-					<div>
+					<div className={cn("w-full", "max-sm:w-full")}>
 						<PrismicNextImage
-							className={cn("w-[750%] h-[500%]")}
+							className={cn("w-[750%] h-[500%]", "max-sm:w-full max-sm:h-auto")}
 							field={slice.primary.image}
 							alt=""
 						/>

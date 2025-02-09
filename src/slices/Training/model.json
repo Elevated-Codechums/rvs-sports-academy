@@ -1,8 +1,8 @@
 {
-  "id": "team",
+  "id": "training",
   "type": "SharedSlice",
-  "name": "Team",
-  "description": "Team",
+  "name": "Training",
+  "description": "Training",
   "variations": [
     {
       "id": "default",
@@ -19,10 +19,19 @@
             "placeholder": ""
           }
         },
-        "coaches": {
+        "description": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Description",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+          }
+        },
+        "plans": {
           "type": "Group",
           "config": {
-            "label": "Coaches",
+            "label": "Plans",
             "repeat": true,
             "fields": {
               "image": {
@@ -33,17 +42,24 @@
                   "thumbnails": []
                 }
               },
-              "name": {
+              "title": {
                 "type": "Text",
                 "config": {
-                  "label": "Name",
+                  "label": "Title",
                   "placeholder": ""
                 }
               },
-              "designation": {
+              "price": {
+                "type": "Text",
+                "config": {
+                  "label": "Price",
+                  "placeholder": ""
+                }
+              },
+              "description": {
                 "type": "StructuredText",
                 "config": {
-                  "label": "Designation",
+                  "label": "Description",
                   "placeholder": "",
                   "allowTargetBlank": true,
                   "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"

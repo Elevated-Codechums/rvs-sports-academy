@@ -4,13 +4,17 @@ import dynamic from "next/dynamic";
 
 export const components = {
   about: dynamic(() => import("./About")),
+  blog: dynamic(() => import("./Blog")),
   contact: dynamic(() => import("./Contact")),
   content_list: dynamic(() => import("./ContentList")),
+  faq: dynamic(() => import("./Faq")),
   free_trial: dynamic(() => import("./FreeTrial")),
   gallery: dynamic(() => import("./Gallery")),
+  gallery_page: dynamic(() => import("./GalleryPage")),
   hero: dynamic(() => import("./Hero")),
   players: dynamic(() => import("./Players")),
   program: dynamic(() => import("./Program")),
   team: dynamic(() => import("./Team")),
+  training: dynamic(() => import("./Training")),
   welcome: dynamic(() => import("./Welcome")),
 };

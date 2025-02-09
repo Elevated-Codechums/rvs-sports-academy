@@ -3,81 +3,86 @@
 		"__TYPE__": "SharedSliceContent",
 		"variation": "default",
 		"primary": {
-			"offices": {
+			"contact": {
 				"__TYPE__": "GroupContentType",
 				"value": [
 					{
 						"__TYPE__": "GroupItemContent",
 						"value": [
 							[
-								"name",
+								"phone",
 								{
 									"__TYPE__": "FieldContent",
-									"value": "golden",
+									"value": "78",
+									"type": "Number"
+								}
+							],
+							[
+								"email",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "yard",
 									"type": "Text"
 								}
 							],
 							[
-								"address",
+								"calls",
 								{
-									"__TYPE__": "StructuredTextContent",
-									"value": [
-										{
-											"type": "paragraph",
-											"content": {
-												"text": "Duis ea pariatur ipsum sint. Culpa voluptate veniam est dolor laboris Lorem sunt labore dolor. Duis reprehenderit consequat incididunt ullamco officia eu eiusmod cupidatat magna tempor deserunt cupidatat id."
-											}
-										}
-									]
-								}
-							],
-							[
-								"location_coordinates",
-								{
-									"position": {
-										"lat": 48.8606111,
-										"lng": 2.337644
-									},
-									"__TYPE__": "GeoPointContent"
+									"__TYPE__": "FieldContent",
+									"value": "16",
+									"type": "Number"
 								}
 							]
 						]
 					}
 				]
 			},
-			"details": {
+			"address": {
 				"__TYPE__": "GroupContentType",
 				"value": [
 					{
 						"__TYPE__": "GroupItemContent",
 						"value": [
 							[
-								"detail_icon",
+								"officeaddress",
 								{
-									"__TYPE__": "ImageContent",
-									"origin": {
-										"id": "main",
-										"url": "https://images.unsplash.com/photo-1601933973783-43cf8a7d4c5f",
-										"width": 6597,
-										"height": 4398
-									},
-									"url": "https://images.unsplash.com/photo-1601933973783-43cf8a7d4c5f",
-									"width": 6597,
-									"height": 4398,
-									"edit": {
-										"zoom": 1,
-										"crop": {
-											"x": 0,
-											"y": 0
-										},
-										"background": "transparent"
-									},
-									"thumbnails": {}
+									"__TYPE__": "StructuredTextContent",
+									"value": [
+										{
+											"type": "paragraph",
+											"content": {
+												"text": "Quis enim consectetur incididunt labore esse. Aliqua ad eu reprehenderit laboris laborum eu. Excepteur adipisicing laboris reprehenderit sint culpa ut amet ad exercitation in adipisicing."
+											}
+										}
+									]
+								}
+							],
+							[
+								"pincode",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "42",
+									"type": "Number"
+								}
+							],
+							[
+								"timings",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "old",
+									"type": "Text"
 								}
 							]
 						]
 					}
 				]
+			},
+			"location": {
+				"position": {
+					"lat": 48.8841267,
+					"lng": 2.3300579
+				},
+				"__TYPE__": "GeoPointContent"
 			}
 		},
 		"items": []

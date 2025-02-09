@@ -20,6 +20,14 @@
             "thumbnails": []
           }
         },
+        "smallimage": {
+          "type": "Image",
+          "config": {
+            "label": "SmallImage",
+            "constraint": {},
+            "thumbnails": []
+          }
+        },
         "sub_heading": {
           "type": "Text",
           "config": {
