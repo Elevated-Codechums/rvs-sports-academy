@@ -26,7 +26,7 @@ const Hero = ({ slice }: HeroProps): JSX.Element => {
           field={slice.primary.hero_image}
           alt=""
           fill
-          className="absolute inset-0 w-full h-full object-cover object-center z-[-1]"
+          className="absolute inset-0 w-full h-full object-cover object-center overflow-hidden  z-[-1]"
         />
       )}
 

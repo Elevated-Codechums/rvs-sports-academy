@@ -32,11 +32,10 @@ const Program = ({ slice }: ProgramProps): JSX.Element => {
           </div>
 
           {/* Overlapping Small Image */}
-          <div className="absolute bottom-[-20px] left-[30px] md:bottom-[-40px] md:left-[50px] w-[40%] md:w-[30%] border-4 border-white rounded-lg shadow-xl overflow-hidden">
+          <div className="absolute bottom-[1px] md:absolute left-2 md:bottom-[-40px] md:left-[50px] w-[40%] md:w-[30%] border-4 border-white rounded-lg shadow-xl overflow-hidden mt-4 md:mt-0">
             <PrismicNextImage
               field={slice.primary.smallimage}
               alt=""
-              fill
               className="object-cover w-full h-full"
             />
           </div>
@@ -81,7 +80,7 @@ const Program = ({ slice }: ProgramProps): JSX.Element => {
               </div>
             ))}
 
-{slice.primary.community_card.map((card, index) => (
+            {slice.primary.community_card.map((card, index) => (
               <div
                 key={index}
                 className="flex items-center gap-4 bg-white p-4 rounded-lg shadow-md border-l-4 border-[#FF6B00]"

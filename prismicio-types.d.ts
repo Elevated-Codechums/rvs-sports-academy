@@ -694,108 +694,73 @@ type BlogSliceVariation = BlogSliceDefault;
 export type BlogSlice = prismic.SharedSlice<"blog", BlogSliceVariation>;
 
 /**
- * Item in *Contact → Default → Primary → Details*
+ * Item in *Contact → Default → Primary → Contact*
  */
-export interface ContactSliceDefaultPrimaryDetailsItem {
+export interface ContactSliceDefaultPrimaryContactItem {
   /**
-   * Title field in *Contact → Default → Primary → Details*
+   * Phone field in *Contact → Default → Primary → Contact*
    *
-   * - **Field Type**: Rich Text
+   * - **Field Type**: Number
    * - **Placeholder**: *None*
-   * - **API ID Path**: contact.default.primary.details[].title
-   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   * - **API ID Path**: contact.default.primary.contact[].phone
+   * - **Documentation**: https://prismic.io/docs/field#number
    */
-  title: prismic.RichTextField;
+  phone: prismic.NumberField;
 
   /**
-   * Detail Link field in *Contact → Default → Primary → Details*
+   * Calls field in *Contact → Default → Primary → Contact*
    *
-   * - **Field Type**: Link
+   * - **Field Type**: Number
    * - **Placeholder**: *None*
-   * - **API ID Path**: contact.default.primary.details[].detail_link
-   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   * - **API ID Path**: contact.default.primary.contact[].calls
+   * - **Documentation**: https://prismic.io/docs/field#number
    */
-  detail_link: prismic.LinkField;
+  calls: prismic.NumberField;
 
   /**
-   * Detail Icon field in *Contact → Default → Primary → Details*
-   *
-   * - **Field Type**: Image
-   * - **Placeholder**: *None*
-   * - **API ID Path**: contact.default.primary.details[].detail_icon
-   * - **Documentation**: https://prismic.io/docs/field#image
-   */
-  detail_icon: prismic.ImageField<never>;
-}
-
-/**
- * Item in *Contact → Default → Primary → Offices*
- */
-export interface ContactSliceDefaultPrimaryOfficesItem {
-  /**
-   * Name field in *Contact → Default → Primary → Offices*
+   * Email field in *Contact → Default → Primary → Contact*
    *
    * - **Field Type**: Text
    * - **Placeholder**: *None*
-   * - **API ID Path**: contact.default.primary.offices[].name
+   * - **API ID Path**: contact.default.primary.contact[].email
    * - **Documentation**: https://prismic.io/docs/field#key-text
    */
-  name: prismic.KeyTextField;
-
-  /**
-   * Address field in *Contact → Default → Primary → Offices*
-   *
-   * - **Field Type**: Rich Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: contact.default.primary.offices[].address
-   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
-   */
-  address: prismic.RichTextField;
-
-  /**
-   * Location Coordinates field in *Contact → Default → Primary → Offices*
-   *
-   * - **Field Type**: GeoPoint
-   * - **Placeholder**: *None*
-   * - **API ID Path**: contact.default.primary.offices[].location_coordinates
-   * - **Documentation**: https://prismic.io/docs/field#geopoint
-   */
-  location_coordinates: prismic.GeoPointField;
+  email: prismic.KeyTextField;
 }
 
 /**
- * Item in *Contact → Default → Primary → Socials*
+ * Item in *Contact → Default → Primary → Address*
  */
-export interface ContactSliceDefaultPrimarySocialsItem {
+export interface ContactSliceDefaultPrimaryAddressItem {
   /**
-   * Social Name field in *Contact → Default → Primary → Socials*
+   * OfficeAddress field in *Contact → Default → Primary → Address*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: contact.default.primary.address[].officeaddress
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  officeaddress: prismic.RichTextField;
+
+  /**
+   * Pincode field in *Contact → Default → Primary → Address*
+   *
+   * - **Field Type**: Number
+   * - **Placeholder**: *None*
+   * - **API ID Path**: contact.default.primary.address[].pincode
+   * - **Documentation**: https://prismic.io/docs/field#number
+   */
+  pincode: prismic.NumberField;
+
+  /**
+   * Timings field in *Contact → Default → Primary → Address*
    *
    * - **Field Type**: Text
    * - **Placeholder**: *None*
-   * - **API ID Path**: contact.default.primary.socials[].social_name
+   * - **API ID Path**: contact.default.primary.address[].timings
    * - **Documentation**: https://prismic.io/docs/field#key-text
    */
-  social_name: prismic.KeyTextField;
-
-  /**
-   * Social Link field in *Contact → Default → Primary → Socials*
-   *
-   * - **Field Type**: Link
-   * - **Placeholder**: *None*
-   * - **API ID Path**: contact.default.primary.socials[].social_link
-   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
-   */
-  social_link: prismic.LinkField;
-
-  /**
-   * Social Image field in *Contact → Default → Primary → Socials*
-   *
-   * - **Field Type**: Image
-   * - **Placeholder**: *None*
-   * - **API ID Path**: contact.default.primary.socials[].social_image
-   * - **Documentation**: https://prismic.io/docs/field#image
-   */
-  social_image: prismic.ImageField<never>;
+  timings: prismic.KeyTextField;
 }
 
 /**
@@ -803,34 +768,34 @@ export interface ContactSliceDefaultPrimarySocialsItem {
  */
 export interface ContactSliceDefaultPrimary {
   /**
-   * Details field in *Contact → Default → Primary*
+   * Location field in *Contact → Default → Primary*
    *
-   * - **Field Type**: Group
+   * - **Field Type**: GeoPoint
    * - **Placeholder**: *None*
-   * - **API ID Path**: contact.default.primary.details[]
-   * - **Documentation**: https://prismic.io/docs/field#group
+   * - **API ID Path**: contact.default.primary.location
+   * - **Documentation**: https://prismic.io/docs/field#geopoint
    */
-  details: prismic.GroupField<Simplify<ContactSliceDefaultPrimaryDetailsItem>>;
+  location: prismic.GeoPointField;
 
   /**
-   * Offices field in *Contact → Default → Primary*
+   * Contact field in *Contact → Default → Primary*
    *
    * - **Field Type**: Group
    * - **Placeholder**: *None*
-   * - **API ID Path**: contact.default.primary.offices[]
+   * - **API ID Path**: contact.default.primary.contact[]
    * - **Documentation**: https://prismic.io/docs/field#group
    */
-  offices: prismic.GroupField<Simplify<ContactSliceDefaultPrimaryOfficesItem>>;
+  contact: prismic.GroupField<Simplify<ContactSliceDefaultPrimaryContactItem>>;
 
   /**
-   * Socials field in *Contact → Default → Primary*
+   * Address field in *Contact → Default → Primary*
    *
    * - **Field Type**: Group
    * - **Placeholder**: *None*
-   * - **API ID Path**: contact.default.primary.socials[]
+   * - **API ID Path**: contact.default.primary.address[]
    * - **Documentation**: https://prismic.io/docs/field#group
    */
-  socials: prismic.GroupField<Simplify<ContactSliceDefaultPrimarySocialsItem>>;
+  address: prismic.GroupField<Simplify<ContactSliceDefaultPrimaryAddressItem>>;
 }
 
 /**
@@ -2037,9 +2002,8 @@ declare module "@prismicio/client" {
       BlogSliceVariation,
       BlogSliceDefault,
       ContactSlice,
-      ContactSliceDefaultPrimaryDetailsItem,
-      ContactSliceDefaultPrimaryOfficesItem,
-      ContactSliceDefaultPrimarySocialsItem,
+      ContactSliceDefaultPrimaryContactItem,
+      ContactSliceDefaultPrimaryAddressItem,
       ContactSliceDefaultPrimary,
       ContactSliceVariation,
       ContactSliceDefault,
