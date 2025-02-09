@@ -1,10 +1,10 @@
 import { cn } from "@/libs/utils";
 import { Content } from "@prismicio/client";
 import { SliceComponentProps } from "@prismicio/react";
-import Banner from "@/Components/About/aboutBanner";
-import AboutSection from "@/Components/About/aboutSection";
-import Team from "@/Components/About/aboutTeam";
-import Testimonial from "@/Components/About/aboutTestimonial";
+import Banner from "@/Components/About/Banner";
+import AboutSection from "@/Components/About/Section";
+import Team from "@/Components/About/Team";
+import Testimonial from "@/Components/About/Testimonial";
 
 
 

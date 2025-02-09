@@ -21,8 +21,10 @@ const Gallery = ({slice}: GalleryProps): JSX.Element => {
     >
       {/* Add your code here */}
       <div>
-        <h1>{slice.primary.heading}</h1>
+        <h1>{(slice.primary as any).heading}</h1>
       </div>
     </section>
   );
 }
+
+export default Gallery;

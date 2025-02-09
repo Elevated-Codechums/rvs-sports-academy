@@ -17,7 +17,7 @@ const Contact = ({ slice }: ContactProps): JSX.Element => {
       data-slice-variation={slice.variation}
       className={cn("min-h-screen flex items-center justify-center")}
     >
-      Placeholder component for contact (variation: {slice.variation}) Slices
+      
     </section>
   );
 };

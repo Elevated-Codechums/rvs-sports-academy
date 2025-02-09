@@ -1,7 +1,7 @@
 import { PrismicNextImage } from "@prismicio/next";
 import { cn } from "@/libs/utils";
 import { Content } from "@prismicio/client";
-import { SliceComponentProps } from "@prismicio/react";
+import { PrismicRichText, SliceComponentProps } from "@prismicio/react";
 
 
 /**
@@ -35,11 +35,10 @@ const Banner = ({ slice }: BannerProps): JSX.Element => {
         <h1 className="text-5xl font-bold uppercase mb-4">ABOUT US</h1>
         <div className="flex flex-col items-center">
 
-        <p className="text-lg  text-center max-w-2xl">
-          Vestibulum quis imperdiet diam, eu faucibus leo. Class aptent tacit.
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
-          congue, felis ac eleifend tempus.
-        </p>
+        <div className="text-lg  text-center max-w-2xl">
+          <PrismicRichText field={slice.primary.description} />
+        </div>
+        
         </div>
       </div>
     </section>
