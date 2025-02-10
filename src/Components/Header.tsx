@@ -11,15 +11,15 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 left-0 z-50 bg-white shadow-md w-full px-6 py-4 flex items-center justify-between border-b-2 border-gray-300">
+    <header className="sticky top-0 left-0 z-50 flex items-center justify-between w-full px-6 py-4 bg-white border-b-2 border-gray-300 shadow-md">
       {/* Logo */}
       <div className="flex items-center gap-2">
         <Image src={rvs} alt="" width={50} height={50} />
-        <a href="/"><h1 className="text-2xl font-bold">RVS Sports Academy</h1></a>
+        <Link href="/"><h1 className="text-2xl font-bold">RVS Sports Academy</h1></Link>
       </div>
 
       {/* Desktop Navigation */}
-      <nav className="hidden lg:flex items-center space-x-6 text-lg font-medium">
+      <nav className="items-center hidden space-x-6 text-lg font-medium lg:flex">
         <Link href="/gallery" className="hover:text-orange-500">Photo Gallery</Link>
         <Link href="/our-players" className="hover:text-orange-500">Our Players</Link>
         <Link href="/our-training" className="hover:text-orange-500">Our Training</Link>
@@ -40,7 +40,7 @@ const Navbar = () => {
 
       {/* Mobile Navigation */}
       {isOpen && (
-        <div className="absolute top-16 left-0 w-full bg-white shadow-lg flex flex-col items-center space-y-4 py-4 border-b-2 border-gray-300 lg:hidden">
+        <div className="absolute left-0 flex flex-col items-center w-full py-4 space-y-4 bg-white border-b-2 border-gray-300 shadow-lg top-16 lg:hidden">
           <Link href="/gallery" className="hover:text-orange-500" onClick={() => setIsOpen(false)}>Photo Gallery</Link>
           <Link href="/our-players" className="hover:text-orange-500" onClick={() => setIsOpen(false)}>Our Players</Link>
           <Link href="/our-training" className="hover:text-orange-500" onClick={() => setIsOpen(false)}>Our Training</Link>
