@@ -39,7 +39,7 @@ const Team = ({ slice }: TeamProps): JSX.Element => {
                 <h1 className="text-xl uppercase font-oswald text-black  font-bold">
                   {team.trainer_name}
                 </h1>
-                <p className="text-orange-500 font-bold pb-20 font-montserrat uppercase">
+                <p className="text-orange-500 font-bold pb-20 font-roboto uppercase">
                   {team.trainer_title}
                 </p>
               </div>
