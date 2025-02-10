@@ -1,6 +1,7 @@
 import { PrismicNextImage } from "@prismicio/next";
 import { cn } from "@/libs/utils";
 import { Content } from "@prismicio/client";
+import { oswald } from "@/libs/fonts";
 import { PrismicRichText, SliceComponentProps } from "@prismicio/react";
 
 
@@ -32,7 +33,7 @@ const Banner = ({ slice }: BannerProps): JSX.Element => {
       <div className="relative w-full z-10 bg-black bg-opacity-50 p-6"
             // style={{ backgroundImage: `url(${slice.primary.background_image.url})` }}
             >
-        <h1 className="text-5xl font-bold uppercase mb-4">ABOUT US</h1>
+        <h1 className="text-5xl font-bold font-oswald uppercase mb-4">ABOUT US</h1>
         <div className="flex flex-col items-center">
 
         <div className="text-lg  text-center max-w-2xl">

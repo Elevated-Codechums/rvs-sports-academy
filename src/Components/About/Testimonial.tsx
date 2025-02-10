@@ -33,13 +33,16 @@ const Testimonial = ({ slice }: TestimonialProps): JSX.Element => {
       </div>
       
       <div className="w-full flex flex-col md:flex-row items-center justify-center text-center md:text-left gap-4">
+        <div className="flex flex-col items-center ">
         <PrismicNextImage
           field={slice.primary.newsletter_image}
           width={200}
           height={200}
           alt=""
-          className="mx-auto md:mx-0"
+          className="mx-auto bg-gray-50 md:mx-0"
         />
+        <h1 className="font-oswald text-xl font-semibold">{slice.primary.newsletter_heading}</h1>
+        </div>
         <div className="flex flex-col gap-2">
           <h1 className="text-rose-600 text-2xl md:text-5xl italic uppercase">
             {slice.primary.newsletter_title}

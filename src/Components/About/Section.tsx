@@ -26,7 +26,7 @@ const AboutSection = ({ slice }: AboutProps): JSX.Element => {
             backgroundSize: "50% 50%",
           }}
         >
-          <h1 className="absolute top-0 left-72 font-roboto-condensed tracking-wide text-9xl text-white opacity-90 uppercase font-[500]">
+          <h1 className="absolute top-0 left-72 font-roboto-condensed tracking-wide text-[0px] md:text-9xl text-white opacity-90 uppercase font-[500]">
             About
           </h1>
           <PrismicNextImage
