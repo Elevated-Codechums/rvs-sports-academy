@@ -15,8 +15,8 @@ const FreeTrial = ({ slice }: FreeTrialProps): JSX.Element => {
 	return (
 		<section
 			className={cn(
-				"h-full w-full flex items-start p-10 justify-between",
-				"max-sm:p-5 max-sm:flex-col"
+				"w-full flex flex-col md:flex-row items-center justify-between p-5 md:p-10",
+				"space-y-8 md:space-y-0"
 			)}
 			data-slice-type={slice.slice_type}
 			data-slice-variation={slice.variation}
@@ -25,23 +25,21 @@ const FreeTrial = ({ slice }: FreeTrialProps): JSX.Element => {
 				<div
 					key={index}
 					className={cn(
-						"flex flex-col items-center justify-between gap-36 w-full h-full p-10 rounded",
-						"max-sm:p-5 max-sm:gap-8"
+						"flex flex-col items-center justify-between gap-8 md:gap-16 w-full p-5 md:p-10 rounded"
 					)}
 				>
 					<div
 						className={cn(
-							"flex flex-row items-start justify-between gap-72 w-full h-full p-10 rounded",
-							"max-sm:flex-col max-sm:gap-4 max-sm:p-5"
+							"flex flex-col md:flex-row items-center md:items-start justify-between gap-4 md:gap-16 w-full p-5 md:p-10 rounded"
 						)}
 					>
-						<div>
-							<h1>{title.sub_heading}</h1>
+						<div className="text-center md:text-left">
+							<h1 className="text-xl md:text-2xl">{title.sub_heading}</h1>
 							<h1
 								className={cn(
-									"text-5xl font-bold font-montserrat text-black"
+									"text-3xl md:text-5xl font-bold font-montserrat text-black"
 								)}
-							>	
+							>
 								{title.heading}
 							</h1>
 						</div>
@@ -49,19 +47,29 @@ const FreeTrial = ({ slice }: FreeTrialProps): JSX.Element => {
 						<PrismicNextLink field={title.link}>
 							<button
 								className={cn(
-									"text-white text-xl font-bold uppercase font-oswald rounded-lg w-40 h-12 bg-basketballOrange"
+									"text-white text-base md:text-xl font-bold uppercase font-oswald rounded-lg w-32 md:w-40 h-10 md:h-12 bg-basketballOrange"
 								)}
 							>
 								{title.link_label}
 							</button>
 						</PrismicNextLink>
 					</div>
-					<div className={cn("w-full", "max-sm:w-full")}>
+					<div className="relative w-full max-w-5xl">
 						<PrismicNextImage
-							className={cn("w-[750%] h-[500%]", "max-sm:w-full max-sm:h-auto")}
+							className="w-full h-auto rounded-lg"
 							field={slice.primary.image}
 							alt=""
 						/>
+						<div className="absolute inset-0 flex items-center justify-center text-center px-5">
+							<h1
+								className={cn(
+									"text-gray-300 text-xl md:text-2xl lg:text-4xl font-bold uppercase font-roboto",
+									"w-full md:w-1/3"
+								)}
+							>
+								{slice.primary.overtext}
+							</h1>
+						</div>
 					</div>
 				</div>
 			))}
