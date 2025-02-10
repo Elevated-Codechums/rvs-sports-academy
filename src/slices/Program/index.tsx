@@ -32,7 +32,7 @@ const Program = ({ slice }: ProgramProps): JSX.Element => {
           </div>
 
           {/* Overlapping Small Image */}
-          <div className="absolute bottom-[1px] md:absolute left-2 md:bottom-[-40px] md:left-[50px] w-[40%] md:w-[30%] border-4 border-white rounded-lg shadow-xl overflow-hidden mt-4 md:mt-0">
+          <div className="absolute bottom-[1px] md:absolute right-2 md:bottom-[-40px] md:right-[50px] w-[40%] md:w-[30%] border-4 border-white rounded-lg shadow-xl overflow-hidden mt-4 md:mt-0">
             <PrismicNextImage
               field={slice.primary.smallimage}
               alt=""

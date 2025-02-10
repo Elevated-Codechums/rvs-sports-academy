@@ -2,7 +2,7 @@ import { cn } from "@/libs/utils";
 import { GalleryPageProps } from "@/slices/GalleryPage";
 import { Content } from "@prismicio/client";
 import { PrismicNextImage } from "@prismicio/next";
-import { SliceComponentProps } from "@prismicio/react";
+import { PrismicRichText, SliceComponentProps } from "@prismicio/react";
 
 export type Gallery = SliceComponentProps<Content.GalleryPageSlice>;
 
@@ -14,9 +14,12 @@ const Gallery = ({ slice }: GalleryPageProps): JSX.Element => {
             className={cn("max-w-6xl mx-auto px-6 md:px-0 py-8")}
         >
             <div className="text-center mb-8">
-                <h1 className="text-6xl font-roboto-condensed uppercase font-bold">
+                <h1 className="text-7xl font-oswald uppercase font-bold">
                     {slice.primary.heading}
                 </h1>
+                <div className="text-gray-600 text-lg p-8">
+                <PrismicRichText field={slice.primary.description} />
+                </div>
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
                 {slice.primary.image.map((image, index) => (

@@ -28,7 +28,7 @@ const Navbar = () => {
 
       {/* Contact Us Button */}
       <div className="hidden lg:block">
-        <Link href="/contact" className="px-4 py-2 text-white bg-orange-600 rounded-md hover:bg-orange-700">Contact Us</Link>
+        <Link href="/contact" className="px-4 py-2 bg-orange-600 text-white font-oswald uppercase rounded-md hover:bg-orange-700">Contact Us</Link>
       </div>
 
       {/* Mobile Menu Toggle */}
@@ -45,7 +45,7 @@ const Navbar = () => {
           <Link href="/our-players" className="hover:text-orange-500" onClick={() => setIsOpen(false)}>Our Players</Link>
           <Link href="/our-training" className="hover:text-orange-500" onClick={() => setIsOpen(false)}>Our Training</Link>
           <Link href="/about" className="hover:text-orange-500" onClick={() => setIsOpen(false)}>About</Link>
-          <Link href="/contact" className="px-4 py-2 text-white bg-orange-600 rounded-md hover:bg-orange-700" onClick={() => setIsOpen(false)}>Contact Us</Link>
+          <Link href="/contact" className="px-4 py-2 bg-orange-600 font-oswald uppercase text-white rounded-md hover:bg-orange-700" onClick={() => setIsOpen(false)}>Contact Us</Link>
         </div>
       )}
     </header>

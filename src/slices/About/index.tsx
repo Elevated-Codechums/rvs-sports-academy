@@ -2,7 +2,7 @@ import { cn } from "@/libs/utils";
 import { Content } from "@prismicio/client";
 import { SliceComponentProps } from "@prismicio/react";
 import Banner from "@/Components/About/Banner";
-import AboutSection from "@/Components/About/Section";
+import Section from "@/Components/About/Section";
 import Team from "@/Components/About/Team";
 import Testimonial from "@/Components/About/Testimonial";
 
@@ -24,7 +24,7 @@ const About = ({ slice }: AboutProps): JSX.Element => {
       className={cn(" ")}
     >
       <Banner slice={slice} index={0} slices={[]} context={null} />
-      <AboutSection slice={slice} index={1} slices={[]} context={null} />
+      <Section slice={slice} index={1} slices={[]} context={null} />
       <Team slice={slice} index={2} slices={[]} context={null} />
       <Testimonial slice={slice} index={3} slices={[]} context={null} />
     
