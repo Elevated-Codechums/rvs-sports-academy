@@ -18,17 +18,23 @@ const Hero = ({ slice }: HeroProps): JSX.Element => {
     <section
       data-slice-type={slice.slice_type}
       data-slice-variation={slice.variation}
-      className={cn("relative flex flex-col items-center justify-center min-h-screen overflow-hidden")}
+      className={cn(
+        "relative flex flex-col items-center justify-center min-h-screen overflow-hidden"
+      )}
     >
-      {/* PrismicNextImage for Background Image */}
+      {/* Background Image */}
       {slice.primary.hero_image.url && (
         <PrismicNextImage
           field={slice.primary.hero_image}
           alt=""
           fill
-          className="absolute inset-0 w-full h-full object-cover object-center overflow-hidden  z-[-1]"
+          sizes="(max-width: 768px) 100vw, 100vw"
+          className="absolute inset-0 w-full h-full object-cover object-center overflow-hidden z-[-2]"
         />
       )}
+
+      {/* Background overlay */}
+      <div className="absolute inset-0 bg-black opacity-50 z-[-1]" />
 
       <div
         className={cn(

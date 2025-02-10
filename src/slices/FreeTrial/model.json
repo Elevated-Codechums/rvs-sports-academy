@@ -59,6 +59,13 @@
             "constraint": {},
             "thumbnails": []
           }
+        },
+        "overtext": {
+          "type": "Text",
+          "config": {
+            "label": "Overtext",
+            "placeholder": ""
+          }
         }
       },
       "items": {}

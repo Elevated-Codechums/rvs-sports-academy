@@ -349,6 +349,17 @@ interface SettingsDocumentData {
    * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
    */
   cta_link: prismic.LinkField;
+
+  /**
+   * Address field in *Settings*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: settings.address
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  address: prismic.KeyTextField;
 }
 
 /**
@@ -1038,6 +1049,16 @@ export interface FreeTrialSliceDefaultPrimary {
    * - **Documentation**: https://prismic.io/docs/field#image
    */
   image: prismic.ImageField<never>;
+
+  /**
+   * Overtext field in *FreeTrial → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: free_trial.default.primary.overtext
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  overtext: prismic.KeyTextField;
 }
 
 /**
