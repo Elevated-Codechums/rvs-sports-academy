@@ -349,6 +349,17 @@ interface SettingsDocumentData {
    * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
    */
   cta_link: prismic.LinkField;
+
+  /**
+   * Address field in *Settings*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: settings.address
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  address: prismic.KeyTextField;
 }
 
 /**
@@ -577,6 +588,16 @@ export interface AboutSliceDefaultPrimary {
    * - **Documentation**: https://prismic.io/docs/field#image
    */
   newsletter_image: prismic.ImageField<never>;
+
+  /**
+   * Newsletter Heading field in *About → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: about.default.primary.newsletter_heading
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  newsletter_heading: prismic.KeyTextField;
 }
 
 /**
@@ -1028,6 +1049,16 @@ export interface FreeTrialSliceDefaultPrimary {
    * - **Documentation**: https://prismic.io/docs/field#image
    */
   image: prismic.ImageField<never>;
+
+  /**
+   * Overtext field in *FreeTrial → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: free_trial.default.primary.overtext
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  overtext: prismic.KeyTextField;
 }
 
 /**
@@ -1284,6 +1315,16 @@ export interface GalleryPageSliceDefaultPrimary {
    * - **Documentation**: https://prismic.io/docs/field#key-text
    */
   heading: prismic.KeyTextField;
+
+  /**
+   * Description field in *GalleryPage → Default → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: gallery_page.default.primary.description
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  description: prismic.RichTextField;
 
   /**
    * Image field in *GalleryPage → Default → Primary*

@@ -239,6 +239,11 @@
 						}
 					}
 				]
+			},
+			"newsletter_heading": {
+				"__TYPE__": "FieldContent",
+				"value": "stop",
+				"type": "Text"
 			}
 		},
 		"items": []

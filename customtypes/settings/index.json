@@ -125,6 +125,13 @@
           "select": null,
           "allowText": true
         }
+      },
+      "address": {
+        "type": "Text",
+        "config": {
+          "label": "Address",
+          "placeholder": ""
+        }
       }
     }
   }

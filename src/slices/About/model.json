@@ -162,6 +162,13 @@
             "constraint": {},
             "thumbnails": []
           }
+        },
+        "newsletter_heading": {
+          "type": "Text",
+          "config": {
+            "label": "Newsletter Heading",
+            "placeholder": ""
+          }
         }
       },
       "items": {}
