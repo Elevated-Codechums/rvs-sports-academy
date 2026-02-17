@@ -1,6 +1,6 @@
 'use client';
 
-import rvs from "@/assets/rvs.png"
+import rvs from "@/assets/rvs-logo.png"
 
 import { useState } from "react";
 import Link from "next/link";
