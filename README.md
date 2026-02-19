@@ -1,4 +1,4 @@
-# RVS Sports Academy
+## RVS Sports Academy
 
 The RVS Sports Academy project entails the design and development of a custom, SEO-optimized, and mobile-responsive website. This platform will effectively showcase the academy's achievements, highlight player profiles, provide training updates, and host a dynamic photo gallery. The website will be developed by Elevated CodeChums using modern technologies such as Next.js, Prismic.io CMS, and Vercel hosting to ensure performance, scalability, and ease of content management.
 
